@@ -29,8 +29,9 @@ We will be designing 2 Mezzanine boards
 
 ## Motors
 
-## Motor Controller
 
+## Motor Controller
+We have decided to use the DRV8833 chipset.
 
 ## Motor Mounts
 
