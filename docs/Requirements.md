@@ -8,6 +8,10 @@ This document states the core requirements and end offering that Gemini will pro
 
 Will be the same size and dimensions of UKMARSBOT
 
+## Processor Support
+
+The primary Processor with be the Raspberry Pi RP2040
+
 ## Mezzanine boards
 
 We will be designing 2 Mezzanine boards
