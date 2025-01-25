@@ -29,6 +29,11 @@ We will be designing 2 Mezzanine boards
 
 ## Motors
 
+N20 extended motor shaft 50:1 DC motors with side mount encoders
+
+[Motor and Encoders](https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423354451)
+
+Connector wires TBD!!
 
 ## Motor Controller
 We have decided to use the DRV8833 chipset.
