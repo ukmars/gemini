@@ -14,10 +14,8 @@ The primary Processor with be the Raspberry Pi RP2040, other processors can be s
 
 ## Mezzanine boards
 
-We will be designing 2 Mezzanine boards
+Initially we will be designing a Mezzanine board for the PiPico/PiPicoW
 
-1. Pico Board
-2. Maker Nano RP2040
 Meazanine boards will achieve connection with the main chassis board with 20mm extented male headers. 0ptionally stackable female headers from the chassis board can be used with standard male headers on the mezanine board.
 The mezanine board will be mounted on the rearmost pair of motor bracket bolts and the rearmost pair of sensor mounting bolts.
 ## Sensors
@@ -30,11 +28,11 @@ The mezanine board will be mounted on the rearmost pair of motor bracket bolts a
 
 ## Motors
 
-N20 extended motor shaft DC motors with side mount encoders. Pololu refer to these as top entry encoders. Gear ratios to be selected by the builder. Recommended ratios 50:1, 30:1 or 20:1. Higher ratios give better resolution and easier control, lower ratios give highr top speed.
+N20 extended motor shaft DC motors with side mount encoders. Gear ratios to be selected by the builder. Recommended ratios 50:1, 30:1 or 20:1. Higher ratios give better resolution and easier control, lower ratios give highr top speed.
 
 [Motor and Encoders](https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423354451)
 or 
-https://www.pololu.com/product/4760
+https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423354451
 
 The above encoders are preferred as they can route the cable forwards without adding height to the motor assembly. Other encoders with cables emerging at the top may fit withing the headroom above the motor, builders will need to confirm this if choosing alternative encoders.
 The connection to the encoders are JST-SH, if possible pads for corresponding JST-SH sockets will be included in the chassis board. 0.1inch x 6 connectors will be included on the chassis board. 
