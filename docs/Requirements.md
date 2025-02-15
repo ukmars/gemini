@@ -4,6 +4,43 @@
 
 This document states the core requirements and end offering that Gemini will provide.
 
+## Board connections
+
+| Name       | Pin  | A/D | Direction | Function |
+|------------|------|-----|-----------|----------|
+| **Connector 1 on Chassis to Mezzanine** |  |  |  |  |
+| 5v        | Con1 | 0   | Pwr Out   | +5v regulated supply provided by chassis |
+| Gnd       | Con1 | 1   | Pwr Out   | Gnd provided by chassis |
+| LMTR1     | Con1 | 2 D | In        | Left motor input 1 to bridge |
+| LMTR2     | Con1 | 3 D | In        | Left motor input 2 to bridge |
+| RMTR1     | Con1 | 4 D | In        | Right motor input 1 to bridge |
+| RMTR2     | Con1 | 5 D | In        | Right motor input 2 to bridge |
+| **Connector 2 on Chassis to Mezzanine** |  |  |  |  |
+| LQA       | Con2 | 0 D | Out       | Left quadrature encoder channel A |
+| LQB       | Con2 | 1 D | Out       | Left quadrature encoder channel B |
+| RQA       | Con2 | 2 D | Out       | Right quadrature encoder channel A |
+| RQB       | Con2 | 3 D | Out       | Right quadrature encoder channel B |
+| 3v3       | Con2 | 4 A | Pwr In    | 3V3 regulated supply provided by mezzanine |
+| Vbatt     | Con2 | 5 A | Pwr Out   | Battery voltage supply after polarity protection |
+| **Connector 3 on Mezzanine to Sensor Board** |  |  |  |  |
+| Vemit     | Con3 | 0   | Pwr Out   | Power supply for sensor emitters, designers choice from 5v, Vbatt or 3v3 |
+| Gnd       | Con3 | 1   | Pwr Out   | Gnd routed from chassis |
+| 3v3       | Con3 | 4   | Pwr Out   | 3V3 regulated supply provided by mezzanine |
+| SEN0DIO   | Con3 | 5 D | In/Out    | Digital I/O line 0 for sensors |
+| SEN1DIO   | Con3 | 6 D | In/Out    | Digital I/O line 1 for sensors |
+| SEN2DIO   | Con3 | 7 D | In/Out    | Digital I/O line 2 for sensors |
+| SEN3DIO   | Con3 | 8 D | In/Out    | Digital I/O line 3 for sensors |
+| SEN4DIO   | Con3 | 9 D | In/Out    | Digital I/O line 4 for sensors |
+| SEN0AIP   | Con3 | 10 A | In       | Analogue input for sensor 0 |
+| SEN1AIP   | Con3 | 11 A | In       | Analogue input for sensor 1 |
+| SEN2AIP   | Con3 | 12 A | In       | Analogue input for sensor 2 |
+| SEN3AIP   | Con3 | 13 A | In       | Analogue input for sensor 3 |
+| SEN4AIP   | Con3 | 14 A | In       | Analogue input for sensor 4 |
+| SEN5AIP   | Con3 | 15 A | In       | Analogue input for sensor 5 |
+| SDA       | Con3 | 14 D | In/Out   | I2C Serial Data |
+| SCL       | Con3 | 15 D | In/Out   | I2C Serial Clock |
+
+
 ## Main board
 
 Will be the same size and dimensions of UKMARSBOT
