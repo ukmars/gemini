@@ -79,6 +79,12 @@ We have decided to use the DRV8833 chipset on a Switch/HW-627 module board which
 Example supplier (no recommendation) https://www.ebay.co.uk/itm/285548428267?itmmeta=01JKATES6WY164KBCSWANRJMRK&hash=item427c033beb:g:P4EAAOSwL0RlSjV8
 Example supplier (no recommendation) https://www.ebay.co.uk/itm/195060438441?itmmeta=01JKATBT9NRDGMP47MV4P07C40&hash=item2d6a8215a9:g:ymYAAOSwSLZig2RE
 
+Found [here](https://www.amazon.co.uk/dp/B07ML2RDNY) as well
+
+Nice article explaining how to wire up [drv8833-arduino-tutorial](https://lastminuteengineers.com/drv8833-arduino-tutorial/)
+
+
+
 ## Motor Mounts
 Pololu motor mounts or equivalent can be used. 3d Printed mounts will offer a better solution using standard M3 or M2.5 bolts with standoffs to mount the mezanine board.
 
