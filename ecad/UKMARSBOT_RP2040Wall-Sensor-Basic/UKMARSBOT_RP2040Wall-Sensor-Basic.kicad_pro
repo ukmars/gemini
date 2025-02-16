@@ -447,7 +447,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "UKMARSBOT_v2_wall-sensor-basic.kicad_pro",
+    "filename": "UKMARSBOT_RP2040Wall-Sensor-Basic.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -485,7 +485,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "UKMARSBOT_v2_wall-sensor-basic.step",
+      "step": "UKMARSBOT_RP2040Wall-Sensor-Basic.step",
       "svg": "",
       "vrml": ""
     },
