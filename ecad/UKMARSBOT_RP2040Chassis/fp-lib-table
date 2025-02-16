@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "ukmarsbot")(type "KiCad")(uri "${KIPRJMOD}/../libraries/ukmarsbot.pretty")(options "")(descr ""))
+)
