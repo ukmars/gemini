@@ -2025,7 +2025,7 @@
 	)
 	(polyline
 		(pts
-			(xy 193.04 125.73) (xy 284.48 125.73)
+			(xy 193.04 135.89) (xy 284.48 135.89)
 		)
 		(stroke
 			(width 0)
@@ -2055,7 +2055,7 @@
 	)
 	(polyline
 		(pts
-			(xy 193.04 165.1) (xy 193.04 125.73)
+			(xy 193.04 165.1) (xy 193.04 135.89)
 		)
 		(stroke
 			(width 0)
@@ -2265,7 +2265,7 @@
 	)
 	(polyline
 		(pts
-			(xy 193.04 125.73) (xy 193.04 85.09)
+			(xy 193.04 135.89) (xy 193.04 85.09)
 		)
 		(stroke
 			(width 0)
@@ -2694,6 +2694,16 @@
 		)
 		(uuid "264de3b9-8f33-41cf-9bda-baf4c7a3dc93")
 	)
+	(text "L4941BV can be used as a replacement if using a lipo battery\nc1 needs to be 0.1uF\nc2 needs to be 22uF\n\nOther 5v regulators can be used in TO-220 packaging. Update cap's as required\n"
+		(exclude_from_sim no)
+		(at 236.982 127.254 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4008e9aa-408e-49b7-88e4-1839216d632d")
+	)
 	(text "RIGHT MOTOR"
 		(exclude_from_sim no)
 		(at 25.4 189.23 0)
@@ -2888,28 +2898,6 @@
 		(uuid "24471396-8085-44a0-aa3b-a602ef3bab9b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 147.5837 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "Vbatt"
-		(shape input)
-		(at 157.48 82.55 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "26054404-0899-475e-88f4-39f65211dd48")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 165.3032 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4102,7 +4090,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1uF, 16V"
+		(property "Value" "0.22uF"
 			(at 224.79 112.1409 0)
 			(effects
 				(font
@@ -4783,7 +4771,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF, 16V"
+		(property "Value" "0.1uF"
 			(at 251.46 112.1409 0)
 			(effects
 				(font
