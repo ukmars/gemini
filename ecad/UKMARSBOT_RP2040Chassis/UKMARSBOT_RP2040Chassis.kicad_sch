@@ -2313,6 +2313,16 @@
 		)
 		(uuid "75a3cc38-ce2c-4ebd-9820-451edf1a266c")
 	)
+	(wire
+		(pts
+			(xy 115.57 120.65) (xy 115.57 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cc377c5-12d6-4e6a-8044-43b59f826b30")
+	)
 	(polyline
 		(pts
 			(xy 12.7 156.21) (xy 68.58 156.21)
@@ -2545,6 +2555,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 120.65) (xy 115.57 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e169f793-a983-4ba0-a78f-b28846e0199e")
+	)
+	(wire
+		(pts
 			(xy 247.65 101.6) (xy 247.65 107.95)
 		)
 		(stroke
@@ -2695,6 +2715,16 @@
 			(justify left bottom)
 		)
 		(uuid "91a84b48-ce4a-47fc-a816-43fb4a870cb4")
+	)
+	(text "Power Smoothing"
+		(exclude_from_sim no)
+		(at 98.552 144.018 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "968a6b38-12bf-4c6f-a14b-58b9ec8d7546")
 	)
 	(text "MECHANICAL"
 		(exclude_from_sim no)
@@ -2858,6 +2888,28 @@
 		(uuid "24471396-8085-44a0-aa3b-a602ef3bab9b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 147.5837 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Vbatt"
+		(shape input)
+		(at 157.48 82.55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "26054404-0899-475e-88f4-39f65211dd48")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 165.3032 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3430,6 +3482,28 @@
 		(uuid "c501d513-0e90-4fd0-80c7-518a85890de7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 81.0768 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "5V"
+		(shape input)
+		(at 113.03 120.65 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d48ac35d-24bd-445b-8c09-01b6d055c39b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 107.7467 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4405,7 +4479,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Diode_THT:D_DO-201AE_P3.81mm_Vertical_KathodeUp"
+		(property "Footprint" "Diode_THT:D_DO-201AD_P15.24mm_Horizontal"
 			(at 247.65 36.83 0)
 			(effects
 				(font
@@ -5011,6 +5085,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 115.57 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bd38f834-8a4c-4456-8be7-e77ce01869f0")
+		(property "Reference" "C4"
+			(at 118.491 129.0863 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330uF, 16V"
+			(at 118.491 131.6232 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P2.50mm"
+			(at 116.5352 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 115.57 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Maximum height is 10mm"
+			(at 115.57 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "808b85e4-7079-4fcd-ab2a-8ae4b84fd7cc")
+		)
+		(pin "2"
+			(uuid "d977ac9d-fd32-415b-adc5-71974dd47747")
+		)
+		(instances
+			(project "UKMARSBOT_RP2040Chassis"
+				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 118.11 181.61 0)
 		(unit 1)
@@ -5502,6 +5655,72 @@
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
 					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 115.57 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e336abc2-31f7-43a6-82ff-519568c51d55")
+		(property "Reference" "#GND4"
+			(at 115.57 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 120.65 134.62 0)
+			(effects
+				(font
+					(size 1.75 1.75)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "ukmarsbot:"
+			(at 115.57 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 115.57 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "709fb8d5-a636-4a1b-b95a-6afceb924fd8")
+		)
+		(instances
+			(project "UKMARSBOT_RP2040Chassis"
+				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
+					(reference "#GND4")
 					(unit 1)
 				)
 			)
