@@ -2713,7 +2713,7 @@
 		)
 		(uuid "cff47ee4-87c2-4959-9240-512d79132cb3")
 	)
-	(global_label "SEN4DI0"
+	(global_label "SEN2DI0"
 		(shape input)
 		(at 130.81 143.51 90)
 		(fields_autoplaced yes)
@@ -2735,7 +2735,7 @@
 			)
 		)
 	)
-	(global_label "SEN2DI0"
+	(global_label "SEN4DI0"
 		(shape input)
 		(at 158.75 143.51 90)
 		(fields_autoplaced yes)
@@ -2823,7 +2823,7 @@
 			)
 		)
 	)
-	(global_label "SEN1AIP"
+	(global_label "SEN0AIP"
 		(shape input)
 		(at 137.16 66.04 0)
 		(fields_autoplaced yes)
@@ -2933,7 +2933,7 @@
 			)
 		)
 	)
-	(global_label "SEN0AIP"
+	(global_label "SEN1AIP"
 		(shape input)
 		(at 173.99 68.58 0)
 		(fields_autoplaced yes)
@@ -3087,7 +3087,7 @@
 			)
 		)
 	)
-	(global_label "SEN0DI0"
+	(global_label "SEN1DI0"
 		(shape input)
 		(at 59.69 157.48 180)
 		(fields_autoplaced yes)
@@ -3175,7 +3175,7 @@
 			)
 		)
 	)
-	(global_label "SEN1DI0"
+	(global_label "SEN0DI0"
 		(shape input)
 		(at 46.99 67.31 180)
 		(fields_autoplaced yes)
@@ -3485,7 +3485,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "47K"
 			(at 73.66 165.0999 0)
 			(effects
 				(font
@@ -4525,7 +4525,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "47K"
 			(at 67.31 80.0099 0)
 			(effects
 				(font
@@ -5525,7 +5525,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC33716"
+		(property "Value" "BC337-40"
 			(at 85.09 158.7499 0)
 			(effects
 				(font
@@ -5545,7 +5545,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://uk.rs-online.com/web/p/bipolar-transistors/7619812/"
 			(at 80.01 157.48 0)
 			(effects
 				(font
@@ -5943,7 +5943,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC33716"
+		(property "Value" "BC337-40"
 			(at 81.28 68.5799 0)
 			(effects
 				(font
@@ -5963,7 +5963,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://uk.rs-online.com/web/p/bipolar-transistors/7619812/"
 			(at 76.2 67.31 0)
 			(effects
 				(font
