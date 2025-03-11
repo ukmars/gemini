@@ -5,8 +5,8 @@
 	(uuid "d8f89e6a-e7a3-4b50-a378-920a806c8e2d")
 	(paper "A4")
 	(title_block
-		(title "UKMARS RP2040 Chassis")
-		(date "2025-02-15")
+		(title "UKMARS Gemini Chassis")
+		(date "2025-03-11")
 		(rev "1")
 	)
 	(lib_symbols
@@ -3415,7 +3415,7 @@
 		)
 		(uuid "dc579d4c-322a-443e-a235-a9c9e466098b")
 	)
-	(text "UKMARS RP2040 Chassis \nBoard Schematic"
+	(text "UKMARS Gemini Chassis \nBoard Schematic"
 		(exclude_from_sim no)
 		(at 178.562 179.07 0)
 		(effects
