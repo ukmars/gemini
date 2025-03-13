@@ -5516,7 +5516,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8be7190-daa5-4cf9-ac0d-349809bd29e1")
-		(property "Reference" "T2"
+		(property "Reference" "Q2"
 			(at 85.09 156.2099 0)
 			(effects
 				(font
@@ -5576,7 +5576,7 @@
 		(instances
 			(project ""
 				(path "/87de0e5b-c96f-4913-b13f-25c167743d73"
-					(reference "T2")
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -5934,7 +5934,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e8a506e1-cd27-4c2f-804f-0f964124f6ae")
-		(property "Reference" "T1"
+		(property "Reference" "Q1"
 			(at 81.28 66.0399 0)
 			(effects
 				(font
@@ -5994,7 +5994,7 @@
 		(instances
 			(project "MouseSMDUKMARSAdvancedBoard"
 				(path "/87de0e5b-c96f-4913-b13f-25c167743d73"
-					(reference "T1")
+					(reference "Q1")
 					(unit 1)
 				)
 			)
