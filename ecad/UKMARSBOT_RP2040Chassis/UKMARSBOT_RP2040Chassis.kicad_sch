@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "UKMARS Gemini Chassis")
-		(date "2025-03-11")
+		(date "2025-03-14")
 		(rev "1")
 	)
 	(lib_symbols
@@ -2533,12 +2533,6 @@
 		)
 	)
 	(junction
-		(at 157.48 95.25)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "02a36d6a-dcbf-4433-abad-3ea711158b27")
-	)
-	(junction
 		(at 236.22 115.57)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2557,10 +2551,10 @@
 		(uuid "5cefaf5d-6feb-4c3f-8788-807ff5ecce52")
 	)
 	(junction
-		(at 154.94 95.25)
+		(at 261.62 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ac36624c-9a6b-481d-a19d-6224eb00bbab")
+		(uuid "72b290be-700f-404b-b463-3abecd341359")
 	)
 	(no_connect
 		(at 113.03 87.63)
@@ -2592,7 +2586,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 36.83) (xy 270.51 36.83)
+			(xy 251.46 36.83) (xy 261.62 36.83)
 		)
 		(stroke
 			(width 0)
@@ -2639,16 +2633,6 @@
 			(type default)
 		)
 		(uuid "0f91d6c5-ec62-4622-8361-3ecdbeb553e0")
-	)
-	(wire
-		(pts
-			(xy 154.94 96.52) (xy 154.94 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1357aacd-117a-4c7c-aa1f-c37b9727872d")
 	)
 	(polyline
 		(pts
@@ -2709,16 +2693,6 @@
 			(type dash)
 		)
 		(uuid "27b60dca-4bc6-4f2e-ad30-521001bfd58e")
-	)
-	(wire
-		(pts
-			(xy 160.02 91.44) (xy 160.02 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2e70bcc7-c863-4ab3-bbb9-1b869df2ced9")
 	)
 	(polyline
 		(pts
@@ -2922,16 +2896,6 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 101.6) (xy 252.73 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a9c0e57-1bcf-4d5d-88b6-6e89c21a2a4d")
-	)
-	(wire
-		(pts
 			(xy 35.56 128.27) (xy 44.45 128.27)
 		)
 		(stroke
@@ -3032,16 +2996,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 91.44) (xy 157.48 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9b6872f3-f4f5-4ce8-9380-d2e074ade861")
-	)
-	(wire
-		(pts
 			(xy 35.56 138.43) (xy 44.45 138.43)
 		)
 		(stroke
@@ -3049,6 +3003,16 @@
 			(type default)
 		)
 		(uuid "a06c4c49-3b33-49c9-a001-a8cd1dd39712")
+	)
+	(wire
+		(pts
+			(xy 247.65 101.6) (xy 252.73 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5a0a06b-35f0-42b9-8c31-e0b87562ce01")
 	)
 	(polyline
 		(pts
@@ -3122,16 +3086,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 95.25) (xy 157.48 96.52)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c588e106-7e31-43fd-b57f-0df254540652")
-	)
-	(wire
-		(pts
 			(xy 106.68 77.47) (xy 113.03 77.47)
 		)
 		(stroke
@@ -3189,6 +3143,16 @@
 			(type default)
 		)
 		(uuid "dba84eb7-977d-4fcf-9db7-fe3172eb6a81")
+	)
+	(wire
+		(pts
+			(xy 261.62 36.83) (xy 270.51 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de9452d0-0314-45cd-baf7-138ca39551db")
 	)
 	(wire
 		(pts
@@ -3262,16 +3226,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 95.25) (xy 157.48 95.25)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f491caf1-79d7-4ced-aff7-ea5e724ed2b7")
-	)
-	(wire
-		(pts
 			(xy 90.17 29.21) (xy 96.52 29.21)
 		)
 		(stroke
@@ -3309,17 +3263,6 @@
 			(type default)
 		)
 		(uuid "ff0f03f1-f448-4e4e-9e7b-7eaeec65f511")
-	)
-	(text "Selector so that motors can be powered by Vbatt or 5v supply. Default is\nVbatt with a cuttable link track for contsructor's that wish to use the 5v jumper"
-		(exclude_from_sim no)
-		(at 73.406 101.092 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0309db57-b9c2-4503-98e5-fadabb87fce1")
 	)
 	(text "Vcc is the output voltage from the MicroController 3.3v"
 		(exclude_from_sim no)
@@ -4183,28 +4126,6 @@
 			)
 		)
 	)
-	(global_label "Vbatt"
-		(shape input)
-		(at 157.48 91.44 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e74f9ea9-92e7-429f-a21e-660ffd7e84c5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.48 83.6168 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "RIGHT_MOTOR_2"
 		(shape input)
 		(at 40.64 176.53 0)
@@ -4218,28 +4139,6 @@
 		(uuid "f435b4b4-cfaa-4e2a-b76d-8e0222d4570e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 58.5628 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "5V"
-		(shape input)
-		(at 160.02 91.44 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "fbf6f629-8e8c-49d7-870d-e38f02b1c54b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 160.02 86.1567 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4856,72 +4755,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+BATT")
-		(at 154.94 95.25 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "68ac931e-4c81-437b-bf76-dcdca3a71412")
-		(property "Reference" "#PWR07"
-			(at 154.94 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+BATT"
-			(at 154.94 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 154.94 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 154.94 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 154.94 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0d5222e9-432c-478a-bfda-38f72563a6ba")
-		)
-		(instances
-			(project ""
-				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 99.06 173.99 0)
 		(unit 1)
@@ -5013,7 +4846,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+BATT"
+		(property "Value" "Vbatt"
 			(at 270.51 31.75 0)
 			(effects
 				(font
@@ -5206,79 +5039,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 157.48 101.6 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "81c44471-b14a-4328-8c2b-8129b2fa1c45")
-		(property "Reference" "J5"
-			(at 162.56 100.3299 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_01x03"
-			(at 162.56 102.8699 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
-			(at 157.48 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 157.48 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 157.48 101.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "b106d50e-4fef-40dc-9b85-ef2b34abbaac")
-		)
-		(pin "1"
-			(uuid "2d60ce92-5a39-470f-b895-0ff7c062195d")
-		)
-		(pin "2"
-			(uuid "9b1b0d81-f89d-45b9-987e-d7fbe1e37e33")
-		)
-		(instances
-			(project ""
-				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
-					(reference "J5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D")
 		(at 247.65 36.83 180)
 		(unit 1)
@@ -5423,73 +5183,6 @@
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
 					(reference "H4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ukmarsbot:PWR_FLAG")
-		(at 154.94 95.25 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a5315f86-bc97-49e1-8625-3daae6456293")
-		(property "Reference" "#FLG01"
-			(at 153.035 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 151.13 95.2499 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 154.94 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 154.94 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 154.94 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "19da81b9-8e05-456a-a9dc-4b7cf1ca596f")
-		)
-		(instances
-			(project ""
-				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
-					(reference "#FLG01")
 					(unit 1)
 				)
 			)
@@ -6214,7 +5907,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+BATT"
+		(property "Value" "Vbatt"
 			(at 220.98 96.52 0)
 			(effects
 				(font
@@ -6469,6 +6162,72 @@
 			(project "SSChassisBoard"
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "ukmarsbot:PWR_FLAG")
+		(at 261.62 36.83 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dba36ffb-ce93-4d4c-aec9-d1f16b62f949")
+		(property "Reference" "#FLG01"
+			(at 261.62 34.925 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 261.62 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.62 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 261.62 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 261.62 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4094e49b-9298-4e83-b860-2a813ebdc7c3")
+		)
+		(instances
+			(project ""
+				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
+					(reference "#FLG01")
 					(unit 1)
 				)
 			)
