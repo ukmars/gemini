@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "UKMARS Gemini Line Sensor Basic")
-		(date "2025-03-04")
+		(date "2025-03-17")
 		(rev "1")
 		(company "Ian Butterworth")
 	)
@@ -3823,7 +3823,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "680R"
 			(at 234.188 54.6173 0)
 			(effects
 				(font
@@ -4022,7 +4022,7 @@
 		(fields_autoplaced yes)
 		(uuid "300487b1-552e-4b72-bf72-71d9102d7553")
 		(property "Reference" "R12"
-			(at 251.968 52.6963 0)
+			(at 252.73 52.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4030,8 +4030,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330R"
-			(at 251.968 54.6173 0)
+		(property "Value" "680R"
+			(at 252.73 54.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5880,7 +5880,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330R"
+		(property "Value" "680R"
 			(at 215.138 54.6173 0)
 			(effects
 				(font
