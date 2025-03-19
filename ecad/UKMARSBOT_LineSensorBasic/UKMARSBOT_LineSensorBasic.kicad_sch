@@ -8,7 +8,6 @@
 		(title "UKMARS Gemini Line Sensor Basic")
 		(date "2025-03-17")
 		(rev "1")
-		(company "Ian Butterworth")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x16"
