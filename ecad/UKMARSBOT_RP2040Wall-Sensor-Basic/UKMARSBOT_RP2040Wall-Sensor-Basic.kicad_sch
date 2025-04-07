@@ -5,10 +5,9 @@
 	(uuid "87de0e5b-c96f-4913-b13f-25c167743d73")
 	(paper "A4")
 	(title_block
-		(title "Mouse SMD UKMARS Advanced Sensor Board")
+		(title "UKMARS Basic Sensor Board for Gemini")
 		(date "2024-12-19")
 		(rev "${version}")
-		(company "Redesign of the UKMARS Advanced board to use SMD and Duncan's design")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x16"
