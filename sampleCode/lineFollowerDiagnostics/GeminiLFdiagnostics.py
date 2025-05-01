@@ -30,7 +30,7 @@ startsensor = ADC(27)
 emitter = Pin(22,Pin.OUT)
 radiusEmitter = Pin(18,Pin.OUT)
 
-onBoardLED = Pin(25,Pin.OUT)
+onBoardLED = Pin("LED", Pin.OUT)
 leftRedLED = Pin(21,Pin.OUT)		#Sensor
 centreAmberLED = Pin(20,Pin.OUT)	#Sensor
 rightGreenLED = Pin(19,Pin.OUT)	#Sensor
@@ -38,9 +38,13 @@ leftWhiteLED = Pin(10,Pin.OUT)	#Mezz
 rightBlueLED = Pin(11,Pin.OUT)	#Mezz
 
 leftRev = PWM(Pin(2))
+leftRev.freq(2000)
 leftFwd = PWM(Pin(3))
+leftFwd.freq(2000)
 rightRev = PWM(Pin(4))
+rightRev.freq(2000)
 rightFwd = PWM(Pin(5))
+rightFwd.freq(2000)
 leftButton = Pin(15, Pin.IN, Pin.PULL_UP)
 rightButton = Pin(14, Pin.IN, Pin.PULL_UP)
 encoders = Encoders()
@@ -278,11 +282,11 @@ while True:
         while rightCount < 20:
             leftCount, rightCount = encoders.get_counts(False)
         stopMotors()
-        time.sleep_ms(250)
+        time.sleep_ms(500)
         leftCount, rightCount = encoders.get_counts(True)
         rightMotor(-50)
         leftMotor(50)
         while leftCount < 20:
             leftCount, rightCount = encoders.get_counts(False)
         stopMotors()
-        time.sleep_ms(250)
+        time.sleep_ms(500)
