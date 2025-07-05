@@ -3950,7 +3950,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "229b42ce-d145-4be0-a2b9-670f51f84a5e")
-		(property "Reference" "R14"
+		(property "Reference" "R7"
 			(at 182.118 126.3563 0)
 			(effects
 				(font
@@ -3959,7 +3959,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "2K2"
+		(property "Value" "680R"
 			(at 182.118 128.2773 0)
 			(effects
 				(font
@@ -4004,7 +4004,7 @@
 		(instances
 			(project "UKMARSBOT_LineSensorBasic"
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
-					(reference "R14")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -4925,7 +4925,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC337"
+		(property "Value" "BC337-40"
 			(at 131.8514 43.1873 0)
 			(effects
 				(font
@@ -4934,7 +4934,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
+		(property "Footprint" "ukmarsbot:BC337"
 			(at 132.08 39.37 0)
 			(effects
 				(font
@@ -5252,7 +5252,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "2K2"
+		(property "Value" "680R"
 			(at 133.858 128.2773 0)
 			(effects
 				(font
@@ -5313,8 +5313,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7efafa0e-50fa-4307-8029-341451cb1d4a")
-		(property "Reference" "R7"
-			(at 108.458 126.3563 0)
+		(property "Reference" "R14"
+			(at 109.22 125.7299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5322,8 +5322,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "2K2"
-			(at 108.458 128.2773 0)
+		(property "Value" "680R"
+			(at 109.22 128.2699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5367,7 +5367,7 @@
 		(instances
 			(project "UKMARSBOT_LineSensorBasic"
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
-					(reference "R7")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -5742,7 +5742,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "2K2"
+		(property "Value" "680R"
 			(at 159.258 128.2773 0)
 			(effects
 				(font
@@ -6088,7 +6088,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "100uF"
 			(at 26.67 38.4809 0)
 			(effects
 				(font
@@ -6158,7 +6158,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BC337"
+		(property "Value" "BC337-40"
 			(at 163.6014 87.6373 0)
 			(effects
 				(font
@@ -6167,7 +6167,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_HandSolder"
+		(property "Footprint" "ukmarsbot:BC337"
 			(at 163.83 83.82 0)
 			(effects
 				(font
