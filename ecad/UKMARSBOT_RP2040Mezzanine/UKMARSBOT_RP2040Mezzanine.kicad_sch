@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "UKMARS Gemini RP2040 Mezzanine V2.0")
-		(date "2025-07-05")
+		(date "2025-07-07")
 		(rev "2")
 	)
 	(lib_symbols

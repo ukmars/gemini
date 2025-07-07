@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "UKMARS Gemini Chassis 2.0")
-		(date "2025-07-02")
+		(date "2025-07-07")
 		(rev "2")
 	)
 	(lib_symbols
@@ -4987,7 +4987,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 200.66 36.83 0)
 			(effects
 				(font

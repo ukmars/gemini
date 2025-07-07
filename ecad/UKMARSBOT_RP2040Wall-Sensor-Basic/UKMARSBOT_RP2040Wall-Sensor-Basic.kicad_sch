@@ -1672,12 +1672,6 @@
 		)
 	)
 	(junction
-		(at 95.25 170.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0b4aa857-0898-4e9e-9210-6a208e13117c")
-	)
-	(junction
 		(at 93.98 38.1)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1744,12 +1738,6 @@
 		(uuid "b760f3e0-e99b-44b7-82a3-b9db384acd24")
 	)
 	(junction
-		(at 82.55 129.54)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c125a62f-5467-41c7-8515-aae657bde0c6")
-	)
-	(junction
 		(at 91.44 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1762,6 +1750,12 @@
 		(uuid "d8573906-ef5a-494f-8ff4-d86c6ad18dfb")
 	)
 	(junction
+		(at 77.47 170.18)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dd38f9e9-9385-4a24-811b-172a62a190db")
+	)
+	(junction
 		(at 134.62 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1772,12 +1766,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e7521941-b024-4972-9ffe-799f548eaf98")
-	)
-	(junction
-		(at 82.55 170.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f2bba86b-ea67-48b7-89e8-bd077cfe84b6")
 	)
 	(junction
 		(at 149.86 41.91)
@@ -2057,16 +2045,6 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 129.54) (xy 105.41 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "525fac2c-ab98-45c8-a33a-c79899ecc152")
-	)
-	(wire
-		(pts
 			(xy 52.07 67.31) (xy 46.99 67.31)
 		)
 		(stroke
@@ -2084,16 +2062,6 @@
 			(type default)
 		)
 		(uuid "59127476-8970-40b4-bd88-356461116e15")
-	)
-	(wire
-		(pts
-			(xy 82.55 170.18) (xy 95.25 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a57da29-0252-4896-83e2-2a64e02f0c04")
 	)
 	(wire
 		(pts
@@ -2227,16 +2195,6 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 154.94) (xy 105.41 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "82c20b7e-b5de-47c6-a9f9-974be1f76a79")
-	)
-	(wire
-		(pts
 			(xy 149.86 88.9) (xy 167.64 88.9)
 		)
 		(stroke
@@ -2367,16 +2325,6 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 129.54) (xy 62.23 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b30c6c35-35f4-4889-a8e4-59ee49e02f28")
-	)
-	(wire
-		(pts
 			(xy 149.86 60.96) (xy 149.86 66.04)
 		)
 		(stroke
@@ -2387,13 +2335,13 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 170.18) (xy 95.25 170.18)
+			(xy 77.47 170.18) (xy 82.55 170.18)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b390c3e5-492b-42f3-808b-53933f90af37")
+		(uuid "b51e85e3-0343-4de8-a6ae-118f95858b45")
 	)
 	(wire
 		(pts
@@ -2407,7 +2355,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 170.18) (xy 82.55 170.18)
+			(xy 71.12 170.18) (xy 77.47 170.18)
 		)
 		(stroke
 			(width 0)
@@ -2514,16 +2462,6 @@
 			(type default)
 		)
 		(uuid "e2869d65-6758-4093-bbd5-8025947fc75b")
-	)
-	(wire
-		(pts
-			(xy 82.55 129.54) (xy 105.41 129.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e4d8ac39-ed81-41d3-9db4-ba45e2054172")
 	)
 	(wire
 		(pts
@@ -2710,44 +2648,6 @@
 			(type none)
 		)
 		(uuid edd801f3-ed1e-4a82-a899-b9c1d5695306)
-	)
-	(text_box "The RP2040 GPIO pins can support a max of 50mA TOTAL. RP2040 runs at 3.3v\n\nEach pin should not draw more than 16mA\n3.3/0.016 = 206\n\nLet's go higher and say 220R"
-		(exclude_from_sim no)
-		(at 20.32 50.8 0)
-		(size 22.86 13.97)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 0.889 0.889)
-			)
-			(justify left top)
-		)
-		(uuid "55b25e09-ed59-4023-83a2-46027a743235")
-	)
-	(text_box "The RP2040 GPIO pins can support a max of 50mA TOTAL. RP2040 runs at 3.3v\n\nEach pin should not draw more than 16mA\n3.3/0.016 = 206\n\nLet's go higher and say 220R"
-		(exclude_from_sim no)
-		(at 24.13 140.97 0)
-		(size 22.86 13.97)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(fill
-			(type none)
-		)
-		(effects
-			(font
-				(size 0.889 0.889)
-			)
-			(justify left top)
-		)
-		(uuid "f95e6be8-6731-4c16-8f96-d83be40062e5")
 	)
 	(text "Diagonal Circuits\n"
 		(exclude_from_sim no)
@@ -2937,6 +2837,28 @@
 		(uuid "24341c4c-dca6-42b4-8291-40f821801d3e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 53.1367 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Vemit"
+		(shape input)
+		(at 69.85 129.54 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "37b418b6-66f8-4602-add2-ab6a0d43d122")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 61.6638 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3144,28 +3066,6 @@
 			)
 		)
 	)
-	(global_label "5V"
-		(shape input)
-		(at 58.42 129.54 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "93fad574-227c-4036-a79a-2d078559d3bb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 53.1367 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "Vcc"
 		(shape input)
 		(at 238.76 44.45 0)
@@ -3223,6 +3123,28 @@
 		(uuid "c73df01b-4736-429a-87ec-0489f5b84160")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 146.05 132.542 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "Vemit"
+		(shape input)
+		(at 107.95 38.1 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d70cd0b2-000d-49a9-9af5-f70bd49734c2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.1362 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3361,7 +3283,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1K0"
+		(property "Value" "680R"
 			(at 133.35 152.3999 0)
 			(effects
 				(font
@@ -3414,7 +3336,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 95.25 170.18 0)
+		(at 77.47 170.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3423,7 +3345,7 @@
 		(fields_autoplaced yes)
 		(uuid "01a55344-b058-4567-85cc-a94917a6975c")
 		(property "Reference" "#PWR02"
-			(at 95.25 176.53 0)
+			(at 77.47 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3432,7 +3354,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 97.79 171.4499 0)
+			(at 80.01 171.4499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3441,7 +3363,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 170.18 0)
+			(at 77.47 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3450,7 +3372,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 170.18 0)
+			(at 77.47 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3459,7 +3381,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 95.25 170.18 0)
+			(at 77.47 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3699,7 +3621,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BPW96B"
+		(property "Value" "BPW85C"
 			(at 168.402 60.452 0)
 			(effects
 				(font
@@ -3708,7 +3630,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm"
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z2.0mm"
 			(at 163.83 55.88 0)
 			(effects
 				(font
@@ -3835,7 +3757,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "33R"
+		(property "Value" "10R"
 			(at 81.28 43.1799 0)
 			(effects
 				(font
@@ -3905,7 +3827,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "33R"
+		(property "Value" "10R"
 			(at 96.52 43.1799 0)
 			(effects
 				(font
@@ -3975,7 +3897,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1K0"
+		(property "Value" "680R"
 			(at 148.59 152.3999 0)
 			(effects
 				(font
@@ -4182,7 +4104,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2k2"
+		(property "Value" "1k8"
 			(at 170.18 82.5499 0)
 			(effects
 				(font
@@ -4294,76 +4216,6 @@
 			(project "UKMARSBOT_RP2040Wall-Sensor-Basic"
 				(path "/87de0e5b-c96f-4913-b13f-25c167743d73"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 105.41 151.13 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "40bbe7c2-00a8-4b0d-837a-8260ec2fda43")
-		(property "Reference" "C1"
-			(at 109.22 149.8599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100uF, 16v"
-			(at 109.22 152.3999 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P2.50mm"
-			(at 106.3752 154.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 105.41 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 105.41 151.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1d25218b-fd82-408a-b160-3cb0a2acc59f")
-		)
-		(pin "1"
-			(uuid "6c1c6211-736d-4695-8ffb-2683614cbc6a")
-		)
-		(instances
-			(project ""
-				(path "/87de0e5b-c96f-4913-b13f-25c167743d73"
-					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -4719,7 +4571,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6be51852-6e5e-4808-9d1f-0be1a71eb34c")
-		(property "Reference" "C3"
+		(property "Reference" "C2"
 			(at 261.62 74.9299 0)
 			(effects
 				(font
@@ -4728,7 +4580,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330uF, 16v"
+		(property "Value" "100uF, 16v"
 			(at 261.62 77.4699 0)
 			(effects
 				(font
@@ -4737,7 +4589,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
 			(at 258.7752 80.01 0)
 			(effects
 				(font
@@ -4773,7 +4625,7 @@
 		(instances
 			(project "UKMARSBOT_RP2040Wall-Sensor-Basic"
 				(path "/87de0e5b-c96f-4913-b13f-25c167743d73"
-					(reference "C3")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -4798,7 +4650,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1K0"
+		(property "Value" "680R"
 			(at 161.29 152.3999 0)
 			(effects
 				(font
@@ -5006,7 +4858,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BPW96B"
+		(property "Value" "BPW85C"
 			(at 150.876 59.182 0)
 			(effects
 				(font
@@ -5015,7 +4867,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm"
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z2.0mm"
 			(at 146.05 55.88 0)
 			(effects
 				(font
@@ -5067,7 +4919,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "877a65b5-a56f-4bfd-bd8a-5d842d6a415d")
-		(property "Reference" "C2"
+		(property "Reference" "C1"
 			(at 111.76 72.3899 0)
 			(effects
 				(font
@@ -5085,7 +4937,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
 			(at 108.9152 77.47 0)
 			(effects
 				(font
@@ -5121,7 +4973,7 @@
 		(instances
 			(project "MouseSMDUKMARSAdvancedBoard"
 				(path "/87de0e5b-c96f-4913-b13f-25c167743d73"
-					(reference "C2")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -5145,7 +4997,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "BPW96B"
+		(property "Value" "BPW85C"
 			(at 135.128 59.436 0)
 			(effects
 				(font
@@ -5154,7 +5006,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm_Horizontal_O1.27mm_Z3.0mm"
+		(property "Footprint" "LED_THT:LED_D3.0mm_Horizontal_O3.81mm_Z2.0mm"
 			(at 130.81 55.88 0)
 			(effects
 				(font
@@ -5258,74 +5110,6 @@
 			(project "MouseSMDUKMARSAdvancedBoard"
 				(path "/87de0e5b-c96f-4913-b13f-25c167743d73"
 					(reference "H2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 66.04 129.54 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9797bc5b-d126-4d93-b687-30c0fb1e505b")
-		(property "Reference" "R5"
-			(at 66.04 123.19 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "33R"
-			(at 66.04 125.73 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
-			(at 66.04 131.318 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 66.04 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 66.04 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "42f8b42a-8d49-46ff-b3e7-acb7c5ad23fd")
-		)
-		(pin "2"
-			(uuid "beea6cf8-ffbb-4023-902d-8b8ff82dd8d3")
-		)
-		(instances
-			(project "MouseSMDSensorBoard"
-				(path "/87de0e5b-c96f-4913-b13f-25c167743d73"
-					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -5664,7 +5448,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "33R"
+		(property "Value" "10R"
 			(at 85.09 137.1599 0)
 			(effects
 				(font
@@ -5877,7 +5661,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92"
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide"
 			(at 85.09 154.94 0)
 			(effects
 				(font
@@ -6292,7 +6076,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92"
+		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide"
 			(at 81.28 64.77 0)
 			(effects
 				(font

@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "UKMARS Gemini Line Sensor Basic")
-		(date "2025-03-17")
+		(date "2025-07-07")
 		(rev "1")
 	)
 	(lib_symbols
