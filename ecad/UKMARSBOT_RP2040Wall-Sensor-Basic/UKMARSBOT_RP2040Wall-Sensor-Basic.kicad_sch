@@ -3552,7 +3552,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47K"
+		(property "Value" "10K"
 			(at 73.66 165.0999 0)
 			(effects
 				(font
@@ -4511,7 +4511,7 @@
 				)
 			)
 		)
-		(property "Value" "220R"
+		(property "Value" "390R"
 			(at 63.5 153.67 90)
 			(effects
 				(font
@@ -4720,7 +4720,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47K"
+		(property "Value" "10K"
 			(at 67.31 80.0099 0)
 			(effects
 				(font
@@ -5278,7 +5278,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x16_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x16_P2.54mm_Vertical"
 			(at 213.36 57.15 0)
 			(effects
 				(font
@@ -5724,7 +5724,7 @@
 				)
 			)
 		)
-		(property "Value" "220R"
+		(property "Value" "390R"
 			(at 55.88 63.5 90)
 			(effects
 				(font
