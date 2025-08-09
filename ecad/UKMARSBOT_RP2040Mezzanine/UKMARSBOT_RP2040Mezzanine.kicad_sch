@@ -5337,6 +5337,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "707-8211 "
+			(at 29.21 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "8ecbc427-f6cd-49b6-aa2f-dbe5b1e34ef5")
 		)
@@ -5463,6 +5472,15 @@
 		)
 		(property "Description" "TACT switch 6mm 4.5mm"
 			(at 273.05 37.592 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "479-1390P "
+			(at 267.97 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5939,6 +5957,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "707-8211 "
+			(at 43.18 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "5ff37fc6-176a-46ac-9ecc-ad1527b91945")
 		)
@@ -6068,6 +6095,15 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 29.21 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "\"228-6004 or  228-5562 or  713-3974 or  813-4845\" "
 			(at 29.21 127 0)
 			(effects
 				(font
@@ -6276,6 +6312,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 270.51 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "c4aa65a8-a769-4d0a-8a56-5cb2c2e8b8fc")
 		)
@@ -6344,6 +6389,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 30.48 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 30.48 53.34 0)
 			(effects
 				(font
@@ -6531,6 +6585,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 121.92 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 121.92 180.34 0)
 			(effects
 				(font
@@ -6745,6 +6808,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 121.92 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
@@ -6801,6 +6873,15 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 43.18 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "\"228-6004 or  228-5562 or  713-3974 or  813-4845\" "
 			(at 43.18 127 0)
 			(effects
 				(font
@@ -6876,6 +6957,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "479-1390P "
+			(at 31.75 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "754a3371-6586-48f3-a6df-3625aa7679e4")
 		)
@@ -6943,6 +7033,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "479-1390P "
+			(at 55.88 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f614c931-0efc-4a7e-99a8-9d48d131b59c")
 		)
@@ -7003,6 +7102,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 133.35 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 133.35 116.84 0)
 			(effects
 				(font
@@ -7204,6 +7312,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 269.24 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "e12f67ea-66e9-474c-8555-7506e557742f")
 		)
@@ -7278,6 +7395,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 134.62 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 134.62 30.48 0)
 			(effects
 				(font
@@ -7701,6 +7827,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 101.6 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "83fd64d6-49d4-48d9-9fdd-784a3fd423bb")
 		)
@@ -7924,6 +8059,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 101.6 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
@@ -7989,6 +8133,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 101.6 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 101.6 187.96 0)
 			(effects
 				(font

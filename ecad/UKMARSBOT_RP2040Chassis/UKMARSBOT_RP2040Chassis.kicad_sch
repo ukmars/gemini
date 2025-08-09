@@ -4200,6 +4200,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 116.84 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "11"
 			(uuid "a596be2e-4b8f-4d18-99b3-12ea40a8f393")
 		)
@@ -4289,6 +4298,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 109.22 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "707-8369 "
 			(at 109.22 74.93 0)
 			(effects
 				(font
@@ -4499,6 +4517,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "793-1346 "
+			(at 236.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "010c79b0-299e-4b0c-b115-18473866114f")
 		)
@@ -4630,7 +4657,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "6 pin motor connector – angled male"
 			(at 30.48 133.35 0)
 			(effects
 				(font
@@ -4640,6 +4667,15 @@
 			)
 		)
 		(property "Note" "6 pin header, 0.1\", male"
+			(at 30.48 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 30.48 133.35 0)
 			(effects
 				(font
@@ -4739,6 +4775,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "194-0629 "
+			(at 220.98 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8e56aff3-d70c-441a-9924-30e21ccfb7c8")
 		)
@@ -4810,6 +4855,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 99.06 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 99.06 173.99 0)
 			(effects
 				(font
@@ -5023,6 +5077,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 200.66 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "55d49ff1-6baa-459f-bf95-13c5d60e7dae")
 		)
@@ -5092,6 +5155,15 @@
 			)
 		)
 		(property "Note" "> 2A rectifier. Shottky is good"
+			(at 247.65 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "628-9451 "
 			(at 247.65 36.83 0)
 			(effects
 				(font
@@ -5179,6 +5251,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 99.06 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
@@ -5235,6 +5316,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 134.62 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 134.62 30.48 0)
 			(effects
 				(font
@@ -5334,6 +5424,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "176-3779 "
+			(at 91.44 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2a46800b-7c68-4442-aab8-761044041f91")
 		)
@@ -5405,6 +5504,15 @@
 			)
 		)
 		(property "Note" "Maximum height is 10mm"
+			(at 247.65 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "538-1433 "
 			(at 247.65 111.76 0)
 			(effects
 				(font
@@ -5550,6 +5658,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 101.6 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "83fd64d6-49d4-48d9-9fdd-784a3fd423bb")
 		)
@@ -5624,7 +5741,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "6 pin motor connector – angled male"
 			(at 30.48 168.91 0)
 			(effects
 				(font
@@ -5634,6 +5751,15 @@
 			)
 		)
 		(property "Note" "6 pin header, 0.1\", male"
+			(at 30.48 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 30.48 168.91 0)
 			(effects
 				(font
@@ -5688,7 +5814,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100uF, 16V"
+		(property "Value" "100uF,16V"
 			(at 118.491 131.6232 0)
 			(effects
 				(font
@@ -5725,6 +5851,15 @@
 			)
 		)
 		(property "Note" "Maximum height is 10mm"
+			(at 115.57 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "176-3779 "
 			(at 115.57 130.81 0)
 			(effects
 				(font
@@ -5804,6 +5939,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 118.11 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 118.11 181.61 0)
 			(effects
 				(font
@@ -6018,6 +6162,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 78.74 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
@@ -6083,6 +6236,15 @@
 			)
 		)
 		(property "Note" "commercial mounts need bushing for screws"
+			(at 26.67 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 26.67 77.47 0)
 			(effects
 				(font
@@ -6287,6 +6449,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 228.6 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "33ed23af-1396-4a1e-a4c3-e0bcd759d07f")
 		)
@@ -6361,6 +6532,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 118.11 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 118.11 173.99 0)
 			(effects
 				(font
@@ -6508,6 +6688,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 26.67 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
@@ -6573,6 +6762,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 78.74 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 78.74 181.61 0)
 			(effects
 				(font
