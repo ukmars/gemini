@@ -98,34 +98,60 @@ jobs:
           schema: ${{ matrix.schema }}
           board:  ${{ matrix.board }}
 
+          # Compute paths once; reuse for artifact + copy + commit
+      - name: Compute paths (for artifacts & docs)
+        id: paths
+        shell: bash
+        run: |
+            set -euo pipefail
+            pname="$(basename '${{ matrix.project }}' .kicad_pro)"
+            src="build/${{ matrix.project }}/docs/${pname}"
+            artifact="kicad-exports-${pname}"
+            # sanitize artifact name
+            artifact="${artifact//\//_}"; artifact="${artifact// /_}"; artifact="${artifact//:/_}"
+            echo "pname=$pname" >> "$GITHUB_OUTPUT"
+            echo "src=$src" >> "$GITHUB_OUTPUT"
+            echo "artifact=$artifact" >> "$GITHUB_OUTPUT"
+
+        # Safety net: keep a copy even if commit fails
+      - name: Upload per-project artifact (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+            name: ${{ steps.paths.outputs.artifact }}
+            path: ${{ steps.paths.outputs.src }}
+            if-no-files-found: warn
+            retention-days: 14
+
       - name: Copy outputs into repo docs/<ProjectName>/
         shell: bash
         run: |
-          set -euo pipefail
-          pname="$(basename '${{ matrix.project }}' .kicad_pro)"
-          src="build/${{ matrix.project }}/docs/${pname}"
-          dest="docs/${pname}"
-          if [ -d "$src" ]; then
+            set -euo pipefail
+            src="${{ steps.paths.outputs.src }}"
+            dest="docs/${{ steps.paths.outputs.pname }}"
+            if [ -d "$src" ]; then
             mkdir -p "$dest"
             rsync -a --delete "$src/" "$dest/"
             echo "Copied to $dest"
             ls -la "$dest"
-          else
+            else
             echo "ERROR: Expected source folder '$src' not found"
             exit 1
-          fi
+            fi
 
       - name: Commit updated docs (only on push)
         if: ${{ github.event_name == 'push' }}
         shell: bash
         run: |
-          set -euo pipefail
-          if ! git diff --quiet -- docs; then
+            set -euo pipefail
+            # Stage first (force in case docs/ is ignored), then decide
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add docs
+            git add -A -f docs
+            if git diff --cached --quiet; then
+            echo "No changes to commit."
+            else
             git commit -m "docs: update ${{ matrix.project }} [skip ci]"
             git push
-          else
-            echo "No changes to commit."
-          fi
+            fi
+
