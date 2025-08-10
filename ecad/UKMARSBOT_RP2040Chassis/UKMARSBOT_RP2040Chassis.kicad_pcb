@@ -1648,7 +1648,7 @@
 				)
 			)
 		)
-		(property "Value" "100uF,16V"
+		(property "Value" "100uF, 16V"
 			(at 1.25 4.4 180)
 			(layer "F.Fab")
 			(uuid "cebc37b4-5478-4ae8-ac5a-c9e46f7ffbd5")

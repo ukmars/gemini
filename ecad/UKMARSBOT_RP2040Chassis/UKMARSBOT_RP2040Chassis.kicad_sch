@@ -5685,7 +5685,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100uF,16V"
+		(property "Value" "100uF, 16V"
 			(at 94.361 131.6232 0)
 			(effects
 				(font
@@ -6129,7 +6129,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100uF,16V"
+		(property "Value" "100uF, 16V"
 			(at 118.491 131.6232 0)
 			(effects
 				(font
