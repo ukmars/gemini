@@ -144,6 +144,40 @@ jobs:
             echo "Merged into docs/. Contents:"
             find docs -maxdepth 2 -type f | sort
 
+      - name: Build merged BOM (docs/_all_projects_bom.csv)
+        shell: python
+        run: |
+            import csv, glob, os
+            # Find per-project BOMs like: docs/<ProjectName>/<ProjectName>_bom.csv
+            bom_paths = sorted(glob.glob('docs/*/*_bom.csv'))
+            if not bom_paths:
+                print("No BOMs found; nothing to merge.")
+                raise SystemExit(0)
+
+            out_path = 'docs/all_projects_bom.csv'
+            # Desired column order (first column = project name)
+            cols = ['Project','Reference','Value','Qty','Note','Description','RSONLINE']
+
+            rows = []
+            for p in bom_paths:
+                project = os.path.basename(os.path.dirname(p))
+                with open(p, newline='', encoding='utf-8') as f:
+                    r = csv.DictReader(f)
+                    for row in r:
+                        row = dict(row)            # copy
+                        row['Project'] = project   # <-- first column value
+                        rows.append(row)
+
+            # Optional: stable sort for readability
+            rows.sort(key=lambda r: (r.get('Project',''), r.get('Reference','')))
+
+            with open(out_path, 'w', newline='', encoding='utf-8') as out:
+                w = csv.DictWriter(out, fieldnames=cols, extrasaction='ignore')
+                w.writeheader()
+                for row in rows:
+                    w.writerow(row)
+
+            print(f"Wrote {out_path} from {len(bom_paths)} BOM file(s).")
 
       - name: Commit updated docs (single commit)
         shell: bash
