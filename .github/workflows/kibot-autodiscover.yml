@@ -7,7 +7,7 @@ on:
       - "**/*.kicad_sch"
       - "**/*.kicad_pcb"
       - "config.kibot.yaml"
-      - ".github/workflows/kibot-autodiscover.yml"   
+      - ".github/workflows/kibot-autodiscover.yml"
   pull_request:
     paths:
       - "**/*.kicad_pro"
@@ -19,6 +19,10 @@ on:
 concurrency:
   group: kibot-${{ github.ref }}
   cancel-in-progress: true
+
+# allow committing to the repo's docs/ folder
+permissions:
+  contents: write
 
 jobs:
   discover:
@@ -72,21 +76,21 @@ jobs:
           # 4) Write a SINGLE-LINE output (no extra spaces/newlines)
           printf 'matrix=%s\n' "$matrix_json" >> "$GITHUB_OUTPUT"
 
-
-          
   build:
     needs: discover
     if: ${{ needs.discover.outputs.matrix != '[]' && needs.discover.outputs.matrix != '' }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      # serialize so commits to docs/ don't race
+      max-parallel: 1
       matrix:
         include: ${{ fromJson(needs.discover.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
         with: { lfs: true }
 
-      - name: Run KiBot
+      - name: Run KiBot (KiCad 8)
         uses: INTI-CMNB/KiBot@v2_k8
         with:
           config: config.kibot.yaml
@@ -94,10 +98,34 @@ jobs:
           schema: ${{ matrix.schema }}
           board:  ${{ matrix.board }}
 
-      - name: Upload artifacts
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: kicad-exports-${{ matrix.project }}
-          path: build/
-          if-no-files-found: warn
+      - name: Copy outputs into repo docs/<ProjectName>/
+        shell: bash
+        run: |
+          set -euo pipefail
+          pname="$(basename '${{ matrix.project }}' .kicad_pro)"
+          src="build/${{ matrix.project }}/docs/${pname}"
+          dest="docs/${pname}"
+          if [ -d "$src" ]; then
+            mkdir -p "$dest"
+            rsync -a --delete "$src/" "$dest/"
+            echo "Copied to $dest"
+            ls -la "$dest"
+          else
+            echo "ERROR: Expected source folder '$src' not found"
+            exit 1
+          fi
+
+      - name: Commit updated docs (only on push)
+        if: ${{ github.event_name == 'push' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! git diff --quiet -- docs; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add docs
+            git commit -m "docs: update ${{ matrix.project }} [skip ci]"
+            git push
+          else
+            echo "No changes to commit."
+          fi
