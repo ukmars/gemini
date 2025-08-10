@@ -98,6 +98,6 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: kicad-exports
+          name: kicad-exports-${{ matrix.project }}
           path: build/
           if-no-files-found: warn
