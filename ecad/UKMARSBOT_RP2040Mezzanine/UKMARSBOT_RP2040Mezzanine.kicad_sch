@@ -6303,7 +6303,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/6813007"
 			(at 270.51 106.68 0)
 			(effects
 				(font
@@ -6312,7 +6312,16 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "681-3007"
+			(at 270.51 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Cut from a bigger strip of 2.54 header"
 			(at 270.51 106.68 0)
 			(effects
 				(font
@@ -6388,7 +6397,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/6813007"
 			(at 30.48 53.34 0)
 			(effects
 				(font
@@ -6397,7 +6406,7 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "681-3007"
 			(at 30.48 53.34 0)
 			(effects
 				(font
@@ -6534,7 +6543,7 @@
 		(at 121.92 180.34 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6749,7 +6758,7 @@
 		(at 121.92 187.96 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -7303,7 +7312,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/6812994"
 			(at 269.24 77.47 0)
 			(effects
 				(font
@@ -7312,7 +7321,16 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "681-2994"
+			(at 269.24 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Might be easier and cheaper to just cut from bigger lengths"
 			(at 269.24 77.47 0)
 			(effects
 				(font
@@ -7394,7 +7412,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/6812994"
 			(at 134.62 30.48 0)
 			(effects
 				(font
@@ -7403,7 +7421,16 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "681-2994"
+			(at 134.62 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Might be easier and cheaper to just cut from bigger lengths"
 			(at 134.62 30.48 0)
 			(effects
 				(font
@@ -7818,7 +7845,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/6812994"
 			(at 101.6 26.67 0)
 			(effects
 				(font
@@ -7827,7 +7854,16 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "681-2994"
+			(at 101.6 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Might be easier and cheaper to just cut from bigger lengths"
 			(at 101.6 26.67 0)
 			(effects
 				(font
@@ -8000,7 +8036,7 @@
 		(at 101.6 180.34 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -8082,7 +8118,7 @@
 		(at 101.6 187.96 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)

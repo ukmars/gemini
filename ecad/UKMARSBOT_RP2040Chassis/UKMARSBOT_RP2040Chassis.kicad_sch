@@ -4191,7 +4191,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "DC Motor Controller https://amzn.eu/d/csv7cRr as an option"
 			(at 116.84 76.2 0)
 			(effects
 				(font
@@ -4201,6 +4201,15 @@
 			)
 		)
 		(property "RSONLINE" ""
+			(at 116.84 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
 			(at 116.84 76.2 0)
 			(effects
 				(font
@@ -4657,7 +4666,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "6 pin motor connector – angled male"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/2518654 Packs are a bit cheaper on ebay These will need to be cut to right size"
 			(at 30.48 133.35 0)
 			(effects
 				(font
@@ -4675,7 +4684,7 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" " 251-8654"
 			(at 30.48 133.35 0)
 			(effects
 				(font
@@ -4804,7 +4813,7 @@
 		(at 99.06 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5154,7 +5163,7 @@
 				(hide yes)
 			)
 		)
-		(property "Note" "> 2A rectifier. Shottky is good"
+		(property "Note" "Polarity protection diode"
 			(at 247.65 36.83 0)
 			(effects
 				(font
@@ -5192,7 +5201,7 @@
 		(at 99.06 181.61 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5315,7 +5324,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/6812994"
 			(at 134.62 30.48 0)
 			(effects
 				(font
@@ -5324,7 +5333,16 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "681-2994"
+			(at 134.62 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Might be easier and cheaper to just cut from bigger lengths"
 			(at 134.62 30.48 0)
 			(effects
 				(font
@@ -5649,7 +5667,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/6812994"
 			(at 101.6 26.67 0)
 			(effects
 				(font
@@ -5658,7 +5676,16 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "681-2994"
+			(at 101.6 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Might be easier and cheaper to just cut from bigger lengths"
 			(at 101.6 26.67 0)
 			(effects
 				(font
@@ -5741,7 +5768,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "6 pin motor connector – angled male"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/2518654 Packs are a bit cheaper on ebay These will need to be cut to right size"
 			(at 30.48 168.91 0)
 			(effects
 				(font
@@ -5759,7 +5786,7 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" " 251-8654"
 			(at 30.48 168.91 0)
 			(effects
 				(font
@@ -5888,7 +5915,7 @@
 		(at 118.11 181.61 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6103,7 +6130,7 @@
 		(at 78.74 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6199,7 +6226,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Right MOTOR"
+		(property "Value" "N20 MOTOR"
 			(at 30.6832 81.7122 0)
 			(effects
 				(font
@@ -6226,7 +6253,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683 Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws"
 			(at 26.67 77.47 0)
 			(effects
 				(font
@@ -6235,7 +6262,7 @@
 				(hide yes)
 			)
 		)
-		(property "Note" "commercial mounts need bushing for screws"
+		(property "Note" ""
 			(at 26.67 77.47 0)
 			(effects
 				(font
@@ -6481,7 +6508,7 @@
 		(at 118.11 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6643,7 +6670,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Left MOTOR"
+		(property "Value" "N20 MOTOR"
 			(at 30.6832 63.9322 0)
 			(effects
 				(font
@@ -6670,7 +6697,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683 Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws"
 			(at 26.67 59.69 0)
 			(effects
 				(font
@@ -6679,7 +6706,7 @@
 				(hide yes)
 			)
 		)
-		(property "Note" "commercial mounts need bushing for screws"
+		(property "Note" ""
 			(at 26.67 59.69 0)
 			(effects
 				(font
@@ -6711,7 +6738,7 @@
 		(at 78.74 181.61 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)

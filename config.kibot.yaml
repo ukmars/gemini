@@ -1,0 +1,43 @@
+kicad: 8
+
+preflight:
+  check_zone_fills: false
+
+variants: []
+
+outputs:
+  - name: schematics_pdf
+    type: pdf_sch
+    options:
+      monochrome: false
+    output: docs/${PROJECT_NAME}_schematic.pdf
+
+  - name: bom_csv
+    type: bom
+    options:
+      format: CSV
+      group_fields: [Manufacturer, MPN, Value, Footprint]
+      ref_separator: ' '
+    output: docs/${PROJECT_NAME}_bom.csv
+
+  - name: ibom
+    type: ibom
+    options:
+      name: "Interactive BOM"
+    output: docs/${PROJECT_NAME}_ibom/ibom.html
+
+  - name: pcb_top
+    type: pcbdraw
+    options:
+      side: top
+      format: PNG
+      dpi: 300
+    output: docs/${PROJECT_NAME}_board_top.png
+
+  - name: pcb_bottom
+    type: pcbdraw
+    options:
+      side: bottom
+      format: PNG
+      dpi: 300
+    output: docs/${PROJECT_NAME}_board_bottom.png

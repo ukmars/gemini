@@ -4706,7 +4706,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Polarized capacitor"
 			(at 257.81 76.2 0)
 			(effects
 				(font
@@ -5099,7 +5099,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
+		(property "Description" "Polarized capacitor"
 			(at 107.95 73.66 0)
 			(effects
 				(font
@@ -5215,7 +5215,7 @@
 		(at 266.7 31.75 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "8934bf1a-a2ad-4bac-948e-bc04d1e00d45")
@@ -5370,7 +5370,7 @@
 		(at 252.73 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "a1b0172b-53e8-4dad-9d4f-b716308c2ba7")
@@ -5476,7 +5476,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "Generic 2.54mm connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 213.36 57.15 0)
 			(effects
 				(font
@@ -5485,7 +5485,16 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "681-6820"
+			(at 213.36 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "https://uk.rs-online.com/web/p/pcb-sockets/6816820 Can also be found on ebay slightly cheaper"
 			(at 213.36 57.15 0)
 			(effects
 				(font
@@ -5556,7 +5565,7 @@
 		(at 252.73 31.75 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "ab6497e9-9adb-4eee-b34a-bb869440ae23")
@@ -6465,7 +6474,7 @@
 		(at 266.7 34.29 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "f38aff63-e2da-4db8-9a1c-afa802c34a5c")

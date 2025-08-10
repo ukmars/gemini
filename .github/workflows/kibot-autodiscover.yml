@@ -1,0 +1,75 @@
+name: KiCad docs via KiBot (auto-discover)
+
+on:
+  push:
+    paths:
+      - "**/*.kicad_pro"
+      - "**/*.kicad_sch"
+      - "**/*.kicad_pcb"
+      - "config.kibot.yaml"
+  pull_request:
+    paths:
+      - "**/*.kicad_pro"
+      - "**/*.kicad_sch"
+      - "**/*.kicad_pcb"
+      - "config.kibot.yaml"
+
+concurrency:
+  group: kibot-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      projects: ${{ steps.collect.outputs.projects }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - id: collect
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-files '*.kicad_pro' >/dev/null 2>&1; then
+            mapfile -t PROJ < <(git ls-files '*.kicad_pro' | sort)
+          else
+            mapfile -d '' -t PROJ < <(find . -type f -name '*.kicad_pro' -print0 | sed 's|^\./||' | sort -z)
+          fi
+
+          echo "Found ${#PROJ[@]} KiCad projects:" >> "$GITHUB_STEP_SUMMARY"
+          for p in "${PROJ[@]}"; do echo "- $p" >> "$GITHUB_STEP_SUMMARY"; done
+
+          python3 - <<'PY' > projects.json
+            import json, sys
+            paths = [p.strip() for p in sys.stdin.read().splitlines() if p.strip()]
+            print(f"projects={json.dumps(paths)}")
+            PY < <(printf '%s\n' "${PROJ[@]}") >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: discover
+    if: ${{ needs.discover.outputs.projects != '[]' && needs.discover.outputs.projects != '' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project: ${{ fromJson(needs.discover.outputs.projects) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Run KiBot
+        uses: INTI-CMNB/KiBot@v2
+        with:
+          project: ${{ matrix.project }}
+          config: config.kibot.yaml
+          dir: build/${{ matrix.project }}
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kicad-exports
+          path: build/
+          if-no-files-found: warn

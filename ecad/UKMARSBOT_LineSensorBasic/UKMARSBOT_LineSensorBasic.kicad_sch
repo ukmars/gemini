@@ -5238,7 +5238,16 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "681-6820"
+			(at 31.75 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "https://uk.rs-online.com/web/p/pcb-sockets/6816820 Need to be cut down"
 			(at 31.75 77.47 0)
 			(effects
 				(font
@@ -5309,7 +5318,7 @@
 		(at 116.84 180.34 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5549,7 +5558,7 @@
 		(at 116.84 187.96 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
