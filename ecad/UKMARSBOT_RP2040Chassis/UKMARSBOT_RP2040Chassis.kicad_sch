@@ -6559,7 +6559,7 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "NA"
 			(at 26.67 81.28 0)
 			(effects
 				(font
@@ -7003,7 +7003,7 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" ""
+		(property "RSONLINE" "NA"
 			(at 26.67 59.69 0)
 			(effects
 				(font
