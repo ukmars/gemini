@@ -1,3 +1,6 @@
+kibot:
+  version: 1
+
 kicad: 8
 
 preflight:
@@ -6,12 +9,14 @@ preflight:
 variants: []
 
 outputs:
+  # Schematic PDF
   - name: schematics_pdf
     type: pdf_sch
     options:
       monochrome: false
     output: docs/${PROJECT_NAME}_schematic.pdf
 
+  # CSV BOM
   - name: bom_csv
     type: bom
     options:
@@ -20,12 +25,14 @@ outputs:
       ref_separator: ' '
     output: docs/${PROJECT_NAME}_bom.csv
 
+  # Interactive HTML BOM (optional)
   - name: ibom
     type: ibom
     options:
       name: "Interactive BOM"
     output: docs/${PROJECT_NAME}_ibom/ibom.html
 
+  # Board renders (top/bottom)
   - name: pcb_top
     type: pcbdraw
     options:
