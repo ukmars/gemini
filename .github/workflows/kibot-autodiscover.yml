@@ -24,16 +24,17 @@ jobs:
   discover:
     runs-on: ubuntu-latest
     outputs:
-      projects: ${{ steps.collect.outputs.projects }}
+      matrix: ${{ steps.collect.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
         with: { lfs: true }
+
       - id: collect
         shell: bash
         run: |
           set -euo pipefail
 
-          # Find all .kicad_pro files (git first, fall back to find)
+          # Find all KiCad projects
           if git ls-files '*.kicad_pro' >/dev/null 2>&1; then
             mapfile -t PROJ < <(git ls-files '*.kicad_pro' | sort)
           else
@@ -43,31 +44,54 @@ jobs:
           echo "Found ${#PROJ[@]} KiCad projects:" >> "$GITHUB_STEP_SUMMARY"
           for p in "${PROJ[@]}"; do echo "- $p" >> "$GITHUB_STEP_SUMMARY"; done
 
-          # Build a *compact* JSON array (no newlines) for the matrix
-          projects_json="$(printf '%s\n' "${PROJ[@]}" | jq -R . | jq -c -s .)"
+          # Build a compact JSON array of objects with explicit schema/board paths
+          first=1
+          json="["
+          for p in "${PROJ[@]}"; do
+            dir="$(dirname "$p")"
+            base="$(basename "$p" .kicad_pro)"
 
-          # Write single-line output; no extra spaces/newlines
-          echo "projects=${projects_json}" >> "$GITHUB_OUTPUT"
+            sch="${dir}/${base}.kicad_sch"
+            pcb="${dir}/${base}.kicad_pcb"
+
+            # Fallbacks: pick the first in the folder if names don’t match the project
+            [[ -f "$sch" ]] || sch="$(find "$dir" -maxdepth 1 -name '*.kicad_sch' | sort | head -n1 || true)"
+            [[ -f "$pcb" ]] || pcb="$(find "$dir" -maxdepth 1 -name '*.kicad_pcb' | sort | head -n1 || true)"
+
+            if [[ -f "$sch" && -f "$pcb" ]]; then
+              obj="$(jq -n --arg project "$p" --arg schema "$sch" --arg board "$pcb" \
+                         '{project:$project, schema:$schema, board:$board}')"
+              if [[ $first -eq 0 ]]; then json+=", "; fi
+              json+="$obj"; first=0
+            else
+              echo "⚠️ Skipping '$p' (missing SCH or PCB). Found: sch='${sch:-none}', pcb='${pcb:-none}'" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
+          json+="]"
+
+          echo "matrix=${json}" >> "$GITHUB_OUTPUT"
+
           
   build:
     needs: discover
-    if: ${{ needs.discover.outputs.projects != '[]' && needs.discover.outputs.projects != '' }}
+    if: ${{ needs.discover.outputs.matrix != '[]' && needs.discover.outputs.matrix != '' }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        project: ${{ fromJson(needs.discover.outputs.projects) }}
+        include: ${{ fromJson(needs.discover.outputs.matrix) }}
+
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
+        with: { lfs: true }
 
       - name: Run KiBot
-        uses: INTI-CMNB/KiBot@v2
+        uses: INTI-CMNB/KiBot@v2_k8
         with:
-          project: ${{ matrix.project }}
           config: config.kibot.yaml
           dir: build/${{ matrix.project }}
+          schema: ${{ matrix.schema }}
+          board:  ${{ matrix.board }}
 
       - name: Upload artifacts
         if: always()
@@ -76,3 +100,4 @@ jobs:
           name: kicad-exports
           path: build/
           if-no-files-found: warn
+
