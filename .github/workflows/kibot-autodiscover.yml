@@ -130,16 +130,20 @@ jobs:
       - name: Merge into repo docs/
         shell: bash
         run: |
-          set -euo pipefail
-          # Collected layout is: collected/docs/<ProjectName>/*
-          if [ -d "collected/docs" ]; then
+            set -euo pipefail
             mkdir -p docs
+            if [ -d "collected/docs" ]; then
+            # case A: artifacts contained a docs/ root
             rsync -a collected/docs/ docs/
+            elif [ -d "collected" ]; then
+            # case B (your current case): artifacts are <ProjectName>/...
+            rsync -a collected/ docs/
+            else
+            echo "Nothing to merge."
+            fi
             echo "Merged into docs/. Contents:"
             find docs -maxdepth 2 -type f | sort
-          else
-            echo "No collected/docs directory found; nothing to merge."
-          fi
+
 
       - name: Commit updated docs (single commit)
         shell: bash
