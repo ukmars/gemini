@@ -1,5 +1,6 @@
 kibot:
   version: 1
+kicad: 8
 
 preflight:
   check_zone_fills: false
@@ -10,37 +11,50 @@ outputs:
   # 1) Schematic PDF
   - name: pdf_schematic
     type: pdf_sch_print
-    dir: docs
+    dir: docs/%f
     options:
       monochrome: false
-      output: "%p_schematic.pdf"
+      output: "%f_schematic.pdf"
 
-  # 2) CSV BoM
+  # 2) CSV BoM (only the columns you want)
   - name: bom_csv
     type: bom
-    dir: docs
+    dir: docs/%f
     options:
       format: CSV
+      csv:
+        hide_pcb_info: true
+        hide_stats_info: true
+        separator: ","
+        string_delimiter: '"'
+      columns:
+        - { field: "References",         name: "Reference" }
+        - { field: "Value" }
+        - { field: "Quantity Per PCB",   name: "Qty" }
+        - { field: "Note" }
+        - { field: "Description" }
+        - { field: "RSONLINE" }
+      # Optional: grouping rules (keep or adjust as you like)
       group_fields: ["Value"]
       ref_separator: " "
-      output: "%p_bom.csv"
+      output: "%f_bom.csv"
 
-  # 3) PCB render - top
+  # 4) PCB render - top
   - name: pcbdraw_top
     type: pcbdraw
-    dir: docs
+    dir: docs/%f
     options:
       format: png
       dpi: 300
       bottom: false
-      output: "%p_board_top.png"
+      output: "%f_board_top.png"
 
-  # 4) PCB render - bottom (mirrored automatically by pcbdraw)
+  # 5) PCB render - bottom
   - name: pcbdraw_bottom
     type: pcbdraw
-    dir: docs
+    dir: docs/%f
     options:
       format: png
       dpi: 300
       bottom: true
-      output: "%p_board_bottom.png"
+      output: "%f_board_bottom.png"
