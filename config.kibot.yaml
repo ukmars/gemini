@@ -1,6 +1,5 @@
 kibot:
   version: 1
-kicad: 8
 
 preflight:
   check_zone_fills: false
