@@ -41,10 +41,10 @@ jobs:
           for p in "${PROJ[@]}"; do echo "- $p" >> "$GITHUB_STEP_SUMMARY"; done
 
           python3 - <<'PY' > projects.json
-            import json, sys
-            paths = [p.strip() for p in sys.stdin.read().splitlines() if p.strip()]
-            print(f"projects={json.dumps(paths)}")
-            PY < <(printf '%s\n' "${PROJ[@]}") >> "$GITHUB_OUTPUT"
+import json, sys
+paths = [p.strip() for p in sys.stdin.read().splitlines() if p.strip()]
+print(f"projects={json.dumps(paths)}")
+PY < <(printf '%s\n' "${PROJ[@]}") >> "$GITHUB_OUTPUT"
 
   build:
     needs: discover
