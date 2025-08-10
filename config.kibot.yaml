@@ -33,6 +33,10 @@ outputs:
         - { field: "Note" }
         - { field: "Description" }
         - { field: "RSONLINE" }
+      # IMPORTANT: stop KiBot “fixing” your Value text
+      parse_value: false         # <- don’t canonicalize 1k/1000 or strip 1%, 5%, etc.
+      normalize_values: false    # <- keep your exact units/prefixes
+      merge_blank_fields: false  # <- avoid merging groups just because a field is blank
       # Optional: grouping rules (keep or adjust as you like)
       group_fields: ["Value"]
       ref_separator: " "
