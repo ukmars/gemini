@@ -31,6 +31,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
+          # Collect project files
           if git ls-files '*.kicad_pro' >/dev/null 2>&1; then
             mapfile -t PROJ < <(git ls-files '*.kicad_pro' | sort)
           else
@@ -40,11 +42,10 @@ jobs:
           echo "Found ${#PROJ[@]} KiCad projects:" >> "$GITHUB_STEP_SUMMARY"
           for p in "${PROJ[@]}"; do echo "- $p" >> "$GITHUB_STEP_SUMMARY"; done
 
-          python3 - <<'PY' > projects.json
-import json, sys
-paths = [p.strip() for p in sys.stdin.read().splitlines() if p.strip()]
-print(f"projects={json.dumps(paths)}")
-PY < <(printf '%s\n' "${PROJ[@]}") >> "$GITHUB_OUTPUT"
+          # Build JSON array for the matrix (e.g. ["a/pro.kicad_pro","b/pro.kicad_pro"])
+          projects_json="$(printf '%s\n' "${PROJ[@]}" | jq -R . | jq -s .)"
+
+          echo "projects=${projects_json}" >> "$GITHUB_OUTPUT"
 
   build:
     needs: discover
