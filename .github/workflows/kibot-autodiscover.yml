@@ -20,7 +20,7 @@ concurrency:
   group: kibot-${{ github.ref }}
   cancel-in-progress: true
 
-# allow committing to the repo's docs/ folder
+# needed for the final commit job
 permissions:
   contents: write
 
@@ -39,7 +39,7 @@ jobs:
           set -euo pipefail
           shopt -s nullglob
 
-          # 1) Collect all .kicad_pro files (git first, fall back to find)
+          # Find all .kicad_pro (prefer git to respect .gitignore)
           if git ls-files '*.kicad_pro' >/dev/null 2>&1; then
             mapfile -t PROJ < <(git ls-files '*.kicad_pro' | sort)
           else
@@ -49,19 +49,14 @@ jobs:
           echo "Found ${#PROJ[@]} KiCad projects:" >> "$GITHUB_STEP_SUMMARY"
           for p in "${PROJ[@]}"; do echo "- $p" >> "$GITHUB_STEP_SUMMARY"; done
 
-          # 2) Build newline-delimited JSON objects safely with jq
           : > rows.jsonl
           for p in "${PROJ[@]}"; do
             dir="$(dirname "$p")"
             base="$(basename "$p" .kicad_pro)"
-
             sch="${dir}/${base}.kicad_sch"
             pcb="${dir}/${base}.kicad_pcb"
-
-            # Fallbacks if names don't match project base
             [[ -f "$sch" ]] || sch="$(find "$dir" -maxdepth 1 -name '*.kicad_sch' | sort | head -n1 || true)"
             [[ -f "$pcb" ]] || pcb="$(find "$dir" -maxdepth 1 -name '*.kicad_pcb' | sort | head -n1 || true)"
-
             if [[ -f "${sch:-}" && -f "${pcb:-}" ]]; then
               jq -n --arg project "$p" --arg schema "$sch" --arg board "$pcb" \
                 '{project:$project, schema:$schema, board:$board}' >> rows.jsonl
@@ -70,10 +65,7 @@ jobs:
             fi
           done
 
-          # 3) Compact one-line JSON array for the matrix
           matrix_json="$(jq -c -s '.' rows.jsonl)"
-
-          # 4) Write a SINGLE-LINE output (no extra spaces/newlines)
           printf 'matrix=%s\n' "$matrix_json" >> "$GITHUB_OUTPUT"
 
   build:
@@ -82,8 +74,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      # serialize so commits to docs/ don't race
-      max-parallel: 1
       matrix:
         include: ${{ fromJson(needs.discover.outputs.matrix) }}
     steps:
@@ -98,60 +88,69 @@ jobs:
           schema: ${{ matrix.schema }}
           board:  ${{ matrix.board }}
 
-          # Compute paths once; reuse for artifact + copy + commit
-      - name: Compute paths (for artifacts & docs)
+      # Compute names/paths once for artifact
+      - name: Compute artifact paths
         id: paths
         shell: bash
         run: |
-            set -euo pipefail
-            pname="$(basename '${{ matrix.project }}' .kicad_pro)"
-            src="build/${{ matrix.project }}/docs/${pname}"
-            artifact="kicad-exports-${pname}"
-            # sanitize artifact name
-            artifact="${artifact//\//_}"; artifact="${artifact// /_}"; artifact="${artifact//:/_}"
-            echo "pname=$pname" >> "$GITHUB_OUTPUT"
-            echo "src=$src" >> "$GITHUB_OUTPUT"
-            echo "artifact=$artifact" >> "$GITHUB_OUTPUT"
+          set -euo pipefail
+          pname="$(basename '${{ matrix.project }}' .kicad_pro)"
+          # We upload the docs directory (so the <ProjectName>/ subfolder is preserved)
+          src_dir="build/${{ matrix.project }}/docs"
+          aname="kicad-exports-${pname}"
+          aname="${aname//\//_}"; aname="${aname// /_}"; aname="${aname//:/_}"
+          echo "pname=$pname"   >> "$GITHUB_OUTPUT"
+          echo "src_dir=$src_dir" >> "$GITHUB_OUTPUT"
+          echo "artifact=$aname"  >> "$GITHUB_OUTPUT"
 
-        # Safety net: keep a copy even if commit fails
+      # Safety net: upload each project's docs as an artifact
       - name: Upload per-project artifact (always)
         if: always()
         uses: actions/upload-artifact@v4
         with:
-            name: ${{ steps.paths.outputs.artifact }}
-            path: ${{ steps.paths.outputs.src }}
-            if-no-files-found: warn
-            retention-days: 14
+          name: ${{ steps.paths.outputs.artifact }}
+          path: ${{ steps.paths.outputs.src_dir }}
+          if-no-files-found: warn
+          retention-days: 14
 
-      - name: Copy outputs into repo docs/<ProjectName>/
+  publish:
+    needs: build
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download all project artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: kicad-exports-*
+          path: collected
+          merge-multiple: true
+
+      - name: Merge into repo docs/
         shell: bash
         run: |
-            set -euo pipefail
-            src="${{ steps.paths.outputs.src }}"
-            dest="docs/${{ steps.paths.outputs.pname }}"
-            if [ -d "$src" ]; then
-            mkdir -p "$dest"
-            rsync -a --delete "$src/" "$dest/"
-            echo "Copied to $dest"
-            ls -la "$dest"
-            else
-            echo "ERROR: Expected source folder '$src' not found"
-            exit 1
-            fi
+          set -euo pipefail
+          # Collected layout is: collected/docs/<ProjectName>/*
+          if [ -d "collected/docs" ]; then
+            mkdir -p docs
+            rsync -a collected/docs/ docs/
+            echo "Merged into docs/. Contents:"
+            find docs -maxdepth 2 -type f | sort
+          else
+            echo "No collected/docs directory found; nothing to merge."
+          fi
 
-      - name: Commit updated docs (only on push)
-        if: ${{ github.event_name == 'push' }}
+      - name: Commit updated docs (single commit)
         shell: bash
         run: |
-            set -euo pipefail
-            # Stage first (force in case docs/ is ignored), then decide
-            git config user.name  "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -A -f docs
-            if git diff --cached --quiet; then
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -f docs
+          if git diff --cached --quiet; then
             echo "No changes to commit."
-            else
-            git commit -m "docs: update ${{ matrix.project }} [skip ci]"
+          else
+            git commit -m "docs: update KiCad exports [skip ci]"
             git push
-            fi
-
+          fi
