@@ -572,6 +572,224 @@
 				)
 			)
 		)
+		(symbol "Device:Battery"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "BT"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Battery"
+				(at 2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 1.524 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 1.524 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Multiple-cell battery"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "batt voltage-source cell"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Battery_0_1"
+				(rectangle
+					(start -2.286 -1.27)
+					(end 2.286 -1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -2.286 1.778)
+					(end 2.286 1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.524 -2.032)
+					(end 1.524 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.524 1.016)
+					(end 1.524 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.016) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.508) (xy 0 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 3.048) (xy 1.778 3.048)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.556) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Battery_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:C_Polarized"
 			(pin_numbers hide)
 			(pin_names
@@ -4264,6 +4482,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Battery")
+		(at 262.89 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "10fea7cf-7774-4c8f-a2a1-4fa20887f090")
+		(property "Reference" "BT1"
+			(at 266.7 57.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "9v Battery"
+			(at 266.7 60.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 262.89 58.166 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 262.89 58.166 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "PP3 9v Battery"
+			(at 262.89 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "32c7948e-a796-4c96-81b6-dc327388f425")
+		)
+		(pin "1"
+			(uuid "12a9616d-60d5-44bd-a9c0-1e609544b085")
+		)
+		(instances
+			(project ""
+				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
+					(reference "BT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 109.22 74.93 270)
 		(unit 1)
@@ -6209,7 +6497,7 @@
 	)
 	(symbol
 		(lib_id "ukmarsbot:GEARMOTOR")
-		(at 26.67 77.47 0)
+		(at 26.67 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6218,7 +6506,7 @@
 		(fields_autoplaced yes)
 		(uuid "cd27c346-880c-4333-bc75-e90b9e47bfd2")
 		(property "Reference" "M2"
-			(at 30.6832 79.1753 0)
+			(at 30.6832 82.9853 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6227,7 +6515,7 @@
 			)
 		)
 		(property "Value" "N20 MOTOR"
-			(at 30.6832 81.7122 0)
+			(at 30.6832 85.5222 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6236,7 +6524,7 @@
 			)
 		)
 		(property "Footprint" "ukmarsbot:MINI-METAL-GEARMOTOR-WITH-BRACKET"
-			(at 26.67 78.486 0)
+			(at 26.67 82.296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6245,7 +6533,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 26.67 78.486 0)
+			(at 26.67 82.296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6253,8 +6541,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683 Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws"
-			(at 26.67 77.47 0)
+		(property "Description" "https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683"
+			(at 26.67 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6262,8 +6550,8 @@
 				(hide yes)
 			)
 		)
-		(property "Note" ""
-			(at 26.67 77.47 0)
+		(property "Note" "Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws"
+			(at 26.67 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6272,7 +6560,7 @@
 			)
 		)
 		(property "RSONLINE" ""
-			(at 26.67 77.47 0)
+			(at 26.67 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6467,7 +6755,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" ""
 			(at 228.6 43.18 0)
 			(effects
 				(font
@@ -6697,7 +6985,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683 Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws"
+		(property "Description" "https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683"
 			(at 26.67 59.69 0)
 			(effects
 				(font
@@ -6706,7 +6994,7 @@
 				(hide yes)
 			)
 		)
-		(property "Note" ""
+		(property "Note" "Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws"
 			(at 26.67 59.69 0)
 			(effects
 				(font
