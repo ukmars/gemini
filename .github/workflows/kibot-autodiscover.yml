@@ -7,12 +7,14 @@ on:
       - "**/*.kicad_sch"
       - "**/*.kicad_pcb"
       - "config.kibot.yaml"
+      - ".github/workflows/kibot-autodiscover.yml"   
   pull_request:
     paths:
       - "**/*.kicad_pro"
       - "**/*.kicad_sch"
       - "**/*.kicad_pcb"
       - "config.kibot.yaml"
+  workflow_dispatch:
 
 concurrency:
   group: kibot-${{ github.ref }}
