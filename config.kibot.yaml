@@ -1,8 +1,6 @@
 kibot:
   version: 1
 
-kicad: 8
-
 preflight:
   check_zone_fills: false
 
@@ -23,7 +21,7 @@ outputs:
     dir: docs
     options:
       format: CSV
-      group_fields: ["Manufacturer", "MPN", "Value", "Footprint"]
+      group_fields: ["Value"]
       ref_separator: " "
       output: "%p_bom.csv"
 
