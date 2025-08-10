@@ -21,20 +21,19 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  discover:
+    discover:
     runs-on: ubuntu-latest
     outputs:
       projects: ${{ steps.collect.outputs.projects }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          lfs: true
+        with: { lfs: true }
       - id: collect
         shell: bash
         run: |
           set -euo pipefail
 
-          # Collect project files
+          # Find all .kicad_pro files (git first, fall back to find)
           if git ls-files '*.kicad_pro' >/dev/null 2>&1; then
             mapfile -t PROJ < <(git ls-files '*.kicad_pro' | sort)
           else
@@ -44,11 +43,12 @@ jobs:
           echo "Found ${#PROJ[@]} KiCad projects:" >> "$GITHUB_STEP_SUMMARY"
           for p in "${PROJ[@]}"; do echo "- $p" >> "$GITHUB_STEP_SUMMARY"; done
 
-          # Build JSON array for the matrix (e.g. ["a/pro.kicad_pro","b/pro.kicad_pro"])
-          projects_json="$(printf '%s\n' "${PROJ[@]}" | jq -R . | jq -s .)"
+          # Build a *compact* JSON array (no newlines) for the matrix
+          projects_json="$(printf '%s\n' "${PROJ[@]}" | jq -R . | jq -c -s .)"
 
+          # Write single-line output; no extra spaces/newlines
           echo "projects=${projects_json}" >> "$GITHUB_OUTPUT"
-
+          
   build:
     needs: discover
     if: ${{ needs.discover.outputs.projects != '[]' && needs.discover.outputs.projects != '' }}
