@@ -592,7 +592,13 @@
           "group_by": false,
           "label": "Note",
           "name": "Note",
-          "show": true
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "RAPID",
+          "name": "RAPID",
+          "show": false
         }
       ],
       "filter_string": "",

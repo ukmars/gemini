@@ -694,7 +694,7 @@
           "group_by": false,
           "label": "Qty",
           "name": "${QUANTITY}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -724,6 +724,12 @@
           "group_by": false,
           "label": "RSONLINE",
           "name": "RSONLINE",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "RAPID",
+          "name": "RAPID",
           "show": true
         }
       ],
