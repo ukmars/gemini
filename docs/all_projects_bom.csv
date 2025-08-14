@@ -1,0 +1,43 @@
+Project,Reference,Value,Qty,Note,Description,RSONLINE
+UKMARSBOT_LineSensorBasic,C1 C2,100uF,2,,Polarized capacitor,739-6799
+UKMARSBOT_LineSensorBasic,D1 D2 D7,TLCR5800,3,,,818-7540
+UKMARSBOT_LineSensorBasic,D4,Radius,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845"""
+UKMARSBOT_LineSensorBasic,D5,Line,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845"""
+UKMARSBOT_LineSensorBasic,D6,S/Finish,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845"""
+UKMARSBOT_LineSensorBasic,J1,Conn_01x16,1,https://uk.rs-online.com/web/p/pcb-sockets/6816820 Need to be cut down,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)",681-6820
+UKMARSBOT_LineSensorBasic,Q1 Q6,BC337-40,2,,,671-1119
+UKMARSBOT_LineSensorBasic,Q2 Q3 Q4 Q5,BPW85C,4,,,815-1263
+UKMARSBOT_LineSensorBasic,R1,50R,1,,Resistor,
+UKMARSBOT_LineSensorBasic,R2 R15,390R,2,,,707-7634
+UKMARSBOT_LineSensorBasic,R3 R5 R17,10R,3,,,707-8580
+UKMARSBOT_LineSensorBasic,R4 R16,10K,2,,,707-7745
+UKMARSBOT_LineSensorBasic,R7 R8 R9 R10 R11 R12 R14,680R,7,,,707-8211
+UKMARSBOT_RP2040Chassis,BT1,9v Battery,1,,PP3 9v Battery,
+UKMARSBOT_RP2040Chassis,C1,0.22uF,1,Maximum height is 10mm,Unpolarized capacitor,194-0629
+UKMARSBOT_RP2040Chassis,C2,0.1uF,1,Maximum height is 10mm,Unpolarized capacitor,538-1433
+UKMARSBOT_RP2040Chassis,C3 C4,"100uF, 16V",2,Maximum height is 10mm,,176-3779 
+UKMARSBOT_RP2040Chassis,D1,1N5401,1,Polarity protection diode,,628-9451
+UKMARSBOT_RP2040Chassis,J1 J2,Pololu Item #4772,2,"6 pin 0.1"" breakout 6 pin header, 0.1"", male","Single row, 01x06, JST-SH breakout",
+UKMARSBOT_RP2040Chassis,J3 J4 J6 J7,Conn_01x06,4,"Might be easier and cheaper to just cut from bigger lengths 0.1"" pitch, polarised, any type",https://uk.rs-online.com/web/p/pcb-headers/6812994,681-2994
+UKMARSBOT_RP2040Chassis,M1 M2,N20 MOTOR,2,Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws,https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683,NA
+UKMARSBOT_RP2040Chassis,R1,47K,1,,Resistor,707-8369
+UKMARSBOT_RP2040Chassis,U1,DVR8833_DC_Controller,1,,DC Motor Controller https://amzn.eu/d/csv7cRr as an option,
+UKMARSBOT_RP2040Chassis,U2,LM7805_TO220,1,,"Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220",793-1346
+UKMARSBOT_RP2040Mezzanine,D1 D2,LED,2,,Light emitting diode,"""228-6004 or  228-5562 or  713-3974 or  813-4845"""
+UKMARSBOT_RP2040Mezzanine,J1 J2 J3 J4 J5,Conn_01x16,5,Might be easier and cheaper to just cut from bigger lengths Cut from a bigger strip of 2.54 header,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/) Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/) Generic connector, single row, 01x04, script generated",681-3007 681-2994
+UKMARSBOT_RP2040Mezzanine,R1 R2,680R,2,,Resistor,707-8211
+UKMARSBOT_RP2040Mezzanine,SW1 SW2 SW3,TACT_SW,3,,TACT switch 6mm 4.5mm,479-1390P
+UKMARSBOT_RP2040Mezzanine,U1,Pico,1,,,
+UKMARSBOT_RP2040Wall-Sensor-Basic,C1 C2,"100uF, 16v",2,,Unpolarized capacitor,739-6799
+UKMARSBOT_RP2040Wall-Sensor-Basic,D1 D2 D3,LED,3,,Light emitting diode,"""228-6004 or  228-5562 or  713-3974 or  813-4845"""
+UKMARSBOT_RP2040Wall-Sensor-Basic,DLED1 DLED2 FLED1,TLCR5800,3,,Light emitting diode,818-7540
+UKMARSBOT_RP2040Wall-Sensor-Basic,FPD1 LDPD1 RDPD1,BPW85C,3,,Photodiode,815-1263
+UKMARSBOT_RP2040Wall-Sensor-Basic,J1,Conn_01x16,1,https://uk.rs-online.com/web/p/pcb-sockets/6816820 Can also be found on ebay slightly cheaper,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)",681-6820
+UKMARSBOT_RP2040Wall-Sensor-Basic,Q1 Q2,BC337-40,2,,"NPN transistor, emitter/base/collector",671-1119
+UKMARSBOT_RP2040Wall-Sensor-Basic,R1 R3,390R,2,,Resistor,707-7634
+UKMARSBOT_RP2040Wall-Sensor-Basic,R10 R12 R14,680R,3,,Resistor,707-8211
+UKMARSBOT_RP2040Wall-Sensor-Basic,R11 R13,2k2,2,,Resistor,707-8255
+UKMARSBOT_RP2040Wall-Sensor-Basic,R15,1k8,1,,Resistor,707-8675
+UKMARSBOT_RP2040Wall-Sensor-Basic,R2,33R,1,,Resistor,707-8805
+UKMARSBOT_RP2040Wall-Sensor-Basic,R4 R6,10K,2,,Resistor,707-7745
+UKMARSBOT_RP2040Wall-Sensor-Basic,R7 R8 R9,10R,3,,Resistor,707-8580

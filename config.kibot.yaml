@@ -1,0 +1,63 @@
+kibot:
+  version: 1
+
+preflight:
+  check_zone_fills: false
+
+variants: []
+
+outputs:
+  # 1) Schematic PDF
+  - name: pdf_schematic
+    type: pdf_sch_print
+    dir: docs/%f
+    options:
+      monochrome: false
+      output: "%f_schematic.pdf"
+
+  # 2) CSV BoM (only the columns you want)
+  - name: bom_csv
+    type: bom
+    dir: docs/%f
+    options:
+      format: CSV
+      csv:
+        hide_pcb_info: true
+        hide_stats_info: true
+        separator: ","
+        string_delimiter: '"'
+      columns:
+        - { field: "References",         name: "Reference" }
+        - { field: "Value" }
+        - { field: "Quantity Per PCB",   name: "Qty" }
+        - { field: "Note" }
+        - { field: "Description" }
+        - { field: "RSONLINE" }
+      # IMPORTANT: stop KiBot “fixing” your Value text
+      parse_value: false         # <- don’t canonicalize 1k/1000 or strip 1%, 5%, etc.
+      normalize_values: false    # <- keep your exact units/prefixes
+      merge_blank_fields: false  # <- avoid merging groups just because a field is blank
+      # Optional: grouping rules (keep or adjust as you like)
+      group_fields: ["Value"]
+      ref_separator: " "
+      output: "%f_bom.csv"
+
+  # 4) PCB render - top
+  - name: pcbdraw_top
+    type: pcbdraw
+    dir: docs/%f
+    options:
+      format: png
+      dpi: 300
+      bottom: false
+      output: "%f_board_top.png"
+
+  # 5) PCB render - bottom
+  - name: pcbdraw_bottom
+    type: pcbdraw
+    dir: docs/%f
+    options:
+      format: png
+      dpi: 300
+      bottom: true
+      output: "%f_board_bottom.png"

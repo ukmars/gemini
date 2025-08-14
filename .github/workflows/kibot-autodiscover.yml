@@ -1,0 +1,194 @@
+name: KiCad docs via KiBot (auto-discover)
+
+on:
+  push:
+    paths:
+      - "**/*.kicad_pro"
+      - "**/*.kicad_sch"
+      - "**/*.kicad_pcb"
+      - "config.kibot.yaml"
+      - ".github/workflows/kibot-autodiscover.yml"
+  pull_request:
+    paths:
+      - "**/*.kicad_pro"
+      - "**/*.kicad_sch"
+      - "**/*.kicad_pcb"
+      - "config.kibot.yaml"
+  workflow_dispatch:
+
+concurrency:
+  group: kibot-${{ github.ref }}
+  cancel-in-progress: true
+
+# needed for the final commit job
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.mk.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { lfs: true }
+
+      - id: mk
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+
+          # Find all .kicad_pro (prefer git to respect .gitignore)
+          if git ls-files '*.kicad_pro' >/dev/null 2>&1; then
+            mapfile -t PROJ < <(git ls-files '*.kicad_pro' | sort)
+          else
+            mapfile -d '' -t PROJ < <(find . -type f -name '*.kicad_pro' -print0 | sed -z 's|^\./||' | sort -z)
+          fi
+
+          echo "Found ${#PROJ[@]} KiCad projects:" >> "$GITHUB_STEP_SUMMARY"
+          for p in "${PROJ[@]}"; do echo "- $p" >> "$GITHUB_STEP_SUMMARY"; done
+
+          : > rows.jsonl
+          for p in "${PROJ[@]}"; do
+            dir="$(dirname "$p")"
+            base="$(basename "$p" .kicad_pro)"
+            sch="${dir}/${base}.kicad_sch"
+            pcb="${dir}/${base}.kicad_pcb"
+            [[ -f "$sch" ]] || sch="$(find "$dir" -maxdepth 1 -name '*.kicad_sch' | sort | head -n1 || true)"
+            [[ -f "$pcb" ]] || pcb="$(find "$dir" -maxdepth 1 -name '*.kicad_pcb' | sort | head -n1 || true)"
+            if [[ -f "${sch:-}" && -f "${pcb:-}" ]]; then
+              jq -n --arg project "$p" --arg schema "$sch" --arg board "$pcb" \
+                '{project:$project, schema:$schema, board:$board}' >> rows.jsonl
+            else
+              echo "⚠️ Skipping '$p' (missing SCH or PCB). sch='${sch:-none}', pcb='${pcb:-none}'" >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
+
+          matrix_json="$(jq -c -s '.' rows.jsonl)"
+          printf 'matrix=%s\n' "$matrix_json" >> "$GITHUB_OUTPUT"
+
+  build:
+    needs: discover
+    if: ${{ needs.discover.outputs.matrix != '[]' && needs.discover.outputs.matrix != '' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJson(needs.discover.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { lfs: true }
+
+      - name: Run KiBot (KiCad 8)
+        uses: INTI-CMNB/KiBot@v2_k8
+        with:
+          config: config.kibot.yaml
+          dir: build/${{ matrix.project }}
+          schema: ${{ matrix.schema }}
+          board:  ${{ matrix.board }}
+
+      # Compute names/paths once for artifact
+      - name: Compute artifact paths
+        id: paths
+        shell: bash
+        run: |
+          set -euo pipefail
+          pname="$(basename '${{ matrix.project }}' .kicad_pro)"
+          # We upload the docs directory (so the <ProjectName>/ subfolder is preserved)
+          src_dir="build/${{ matrix.project }}/docs"
+          aname="kicad-exports-${pname}"
+          aname="${aname//\//_}"; aname="${aname// /_}"; aname="${aname//:/_}"
+          echo "pname=$pname"   >> "$GITHUB_OUTPUT"
+          echo "src_dir=$src_dir" >> "$GITHUB_OUTPUT"
+          echo "artifact=$aname"  >> "$GITHUB_OUTPUT"
+
+      # Safety net: upload each project's docs as an artifact
+      - name: Upload per-project artifact (always)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.paths.outputs.artifact }}
+          path: ${{ steps.paths.outputs.src_dir }}
+          if-no-files-found: warn
+          retention-days: 14
+
+  publish:
+    needs: build
+    if: ${{ github.event_name == 'push' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download all project artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: kicad-exports-*
+          path: collected
+          merge-multiple: true
+
+      - name: Merge into repo docs/
+        shell: bash
+        run: |
+            set -euo pipefail
+            mkdir -p docs
+            if [ -d "collected/docs" ]; then
+            # case A: artifacts contained a docs/ root
+            rsync -a collected/docs/ docs/
+            elif [ -d "collected" ]; then
+            # case B (your current case): artifacts are <ProjectName>/...
+            rsync -a collected/ docs/
+            else
+            echo "Nothing to merge."
+            fi
+            echo "Merged into docs/. Contents:"
+            find docs -maxdepth 2 -type f | sort
+
+      - name: Build merged BOM (docs/_all_projects_bom.csv)
+        shell: python
+        run: |
+            import csv, glob, os
+            # Find per-project BOMs like: docs/<ProjectName>/<ProjectName>_bom.csv
+            bom_paths = sorted(glob.glob('docs/*/*_bom.csv'))
+            if not bom_paths:
+                print("No BOMs found; nothing to merge.")
+                raise SystemExit(0)
+
+            out_path = 'docs/all_projects_bom.csv'
+            # Desired column order (first column = project name)
+            cols = ['Project','Reference','Value','Qty','Note','Description','RSONLINE']
+
+            rows = []
+            for p in bom_paths:
+                project = os.path.basename(os.path.dirname(p))
+                with open(p, newline='', encoding='utf-8') as f:
+                    r = csv.DictReader(f)
+                    for row in r:
+                        row = dict(row)            # copy
+                        row['Project'] = project   # <-- first column value
+                        rows.append(row)
+
+            # Optional: stable sort for readability
+            rows.sort(key=lambda r: (r.get('Project',''), r.get('Reference','')))
+
+            with open(out_path, 'w', newline='', encoding='utf-8') as out:
+                w = csv.DictWriter(out, fieldnames=cols, extrasaction='ignore')
+                w.writeheader()
+                for row in rows:
+                    w.writerow(row)
+
+            print(f"Wrote {out_path} from {len(bom_paths)} BOM file(s).")
+
+      - name: Commit updated docs (single commit)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -f docs
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "docs: update KiCad exports [skip ci]"
+            git push
+          fi

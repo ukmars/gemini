@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "UKMARS Gemini Chassis 2.0")
-		(date "2025-07-07")
+		(date "2025-08-14")
 		(rev "2")
 	)
 	(lib_symbols
@@ -563,6 +563,360 @@
 						)
 					)
 					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:Battery"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "BT"
+				(at 2.54 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Battery"
+				(at 2.54 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 1.524 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 1.524 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Multiple-cell battery"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "batt voltage-source cell"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Battery_0_1"
+				(rectangle
+					(start -2.286 -1.27)
+					(end 2.286 -1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -2.286 1.778)
+					(end 2.286 1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.524 -2.032)
+					(end 1.524 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.524 1.016)
+					(end 1.524 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.016) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.508) (xy 0 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 3.048) (xy 1.778 3.048)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 3.556) (xy 1.27 2.54)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Battery_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2001,294 +2355,6 @@
 				)
 			)
 		)
-		(symbol "ukmarsbot:CONN_06LOCK_LONGPADS"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at -5.08 10.668 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" "CONN_06LOCK_LONGPADS"
-				(at -5.08 -9.906 0)
-				(effects
-					(font
-						(size 1.778 1.778)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "CONN_06LOCK_LONGPADS_1_0"
-				(polyline
-					(pts
-						(xy -5.08 10.16) (xy -5.08 -7.62)
-					)
-					(stroke
-						(width 0.4064)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.08 10.16) (xy 1.27 10.16)
-					)
-					(stroke
-						(width 0.4064)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -5.08) (xy 0 -5.08)
-					)
-					(stroke
-						(width 0.6096)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 -2.54) (xy 0 -2.54)
-					)
-					(stroke
-						(width 0.6096)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy 0 0)
-					)
-					(stroke
-						(width 0.6096)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy 0 2.54)
-					)
-					(stroke
-						(width 0.6096)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 5.08) (xy 0 5.08)
-					)
-					(stroke
-						(width 0.6096)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 7.62) (xy 0 7.62)
-					)
-					(stroke
-						(width 0.6096)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -7.62) (xy -5.08 -7.62)
-					)
-					(stroke
-						(width 0.4064)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -7.62) (xy 1.27 10.16)
-					)
-					(stroke
-						(width 0.4064)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 5.08 -5.08 180)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 5.08)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 5.08)
-					(name "3"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 5.08)
-					(name "4"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 5.08 180)
-					(length 5.08)
-					(name "5"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 7.62 180)
-					(length 5.08)
-					(name "6"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "ukmarsbot:GEARMOTOR"
 			(pin_names
 				(offset 0)
@@ -2531,6 +2597,330 @@
 				)
 			)
 		)
+		(symbol "ukmarsbot:Pololu_JST-SH_Side_Entry"
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Pololu_JST-SH_Side_Entry"
+				(at 0 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single row, 01x06, JST-SH breakout"
+				(at 0.762 10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Pololu_JST-SH_Side_Entry_1_1"
+				(polyline
+					(pts
+						(xy 1.27 -7.62) (xy 0.8636 -7.62)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -5.08) (xy 0.8636 -5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54) (xy 0.8636 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 5.08) (xy 0.8636 5.08)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0.8636 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 5.207)
+					(end 0 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(pin passive line
+					(at 5.08 5.08 180)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -5.08 180)
+					(length 3.81)
+					(name "M2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -7.62 180)
+					(length 3.81)
+					(name "M1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 236.22 115.57)
@@ -2561,12 +2951,12 @@
 		(uuid "6364cf57-90de-45df-9959-393d77179c93")
 	)
 	(no_connect
-		(at 226.06 38.1)
+		(at 228.6 38.1)
 		(uuid "6e4a7950-af15-428b-823e-a81b564efaea")
 	)
 	(wire
 		(pts
-			(xy 205.74 34.29) (xy 228.6 34.29)
+			(xy 205.74 34.29) (xy 226.06 34.29)
 		)
 		(stroke
 			(width 0)
@@ -2576,7 +2966,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 135.89) (xy 44.45 135.89)
+			(xy 35.56 138.43) (xy 44.45 138.43)
 		)
 		(stroke
 			(width 0)
@@ -2616,7 +3006,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 130.81) (xy 44.45 130.81)
+			(xy 35.56 143.51) (xy 44.45 143.51)
 		)
 		(stroke
 			(width 0)
@@ -2716,7 +3106,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 176.53) (xy 40.64 176.53)
+			(xy 35.56 168.91) (xy 40.64 168.91)
 		)
 		(stroke
 			(width 0)
@@ -2736,7 +3126,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 163.83) (xy 40.64 163.83)
+			(xy 35.56 181.61) (xy 40.64 181.61)
 		)
 		(stroke
 			(width 0)
@@ -2746,7 +3136,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 140.97) (xy 44.45 140.97)
+			(xy 35.56 133.35) (xy 44.45 133.35)
 		)
 		(stroke
 			(width 0)
@@ -2786,7 +3176,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 173.99) (xy 40.64 173.99)
+			(xy 35.56 171.45) (xy 40.64 171.45)
 		)
 		(stroke
 			(width 0)
@@ -2816,7 +3206,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 171.45) (xy 40.64 171.45)
+			(xy 35.56 176.53) (xy 40.64 176.53)
 		)
 		(stroke
 			(width 0)
@@ -2856,7 +3246,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 166.37) (xy 40.64 166.37)
+			(xy 35.56 179.07) (xy 40.64 179.07)
 		)
 		(stroke
 			(width 0)
@@ -2876,7 +3266,7 @@
 	)
 	(wire
 		(pts
-			(xy 228.6 38.1) (xy 228.6 34.29)
+			(xy 226.06 38.1) (xy 226.06 34.29)
 		)
 		(stroke
 			(width 0)
@@ -2896,7 +3286,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 128.27) (xy 44.45 128.27)
+			(xy 35.56 146.05) (xy 44.45 146.05)
 		)
 		(stroke
 			(width 0)
@@ -2916,7 +3306,7 @@
 	)
 	(polyline
 		(pts
-			(xy 68.58 49.53) (xy 68.58 120.65)
+			(xy 68.58 49.53) (xy 68.58 100.33)
 		)
 		(stroke
 			(width 0)
@@ -2933,16 +3323,6 @@
 			(type default)
 		)
 		(uuid "7cc377c5-12d6-4e6a-8044-43b59f826b30")
-	)
-	(polyline
-		(pts
-			(xy 12.7 156.21) (xy 68.58 156.21)
-		)
-		(stroke
-			(width 0)
-			(type dash)
-		)
-		(uuid "7ea12129-6a69-4cd5-a7e5-b2547a18510c")
 	)
 	(wire
 		(pts
@@ -2996,7 +3376,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 138.43) (xy 44.45 138.43)
+			(xy 35.56 135.89) (xy 44.45 135.89)
 		)
 		(stroke
 			(width 0)
@@ -3026,7 +3406,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 168.91) (xy 40.64 168.91)
+			(xy 35.56 173.99) (xy 40.64 173.99)
 		)
 		(stroke
 			(width 0)
@@ -3036,7 +3416,7 @@
 	)
 	(wire
 		(pts
-			(xy 35.56 133.35) (xy 44.45 133.35)
+			(xy 35.56 140.97) (xy 44.45 140.97)
 		)
 		(stroke
 			(width 0)
@@ -3106,7 +3486,7 @@
 	)
 	(polyline
 		(pts
-			(xy 12.7 120.65) (xy 68.58 120.65)
+			(xy 12.7 96.52) (xy 68.58 96.52)
 		)
 		(stroke
 			(width 0)
@@ -3196,7 +3576,7 @@
 	)
 	(polyline
 		(pts
-			(xy 68.58 120.65) (xy 68.58 156.21)
+			(xy 68.58 100.33) (xy 68.58 156.21)
 		)
 		(stroke
 			(width 0)
@@ -3295,7 +3675,7 @@
 		)
 		(uuid "4008e9aa-408e-49b7-88e4-1839216d632d")
 	)
-	(text "RIGHT MOTOR"
+	(text "RIGHT MOTOR BREAKOUT"
 		(exclude_from_sim no)
 		(at 25.4 189.23 0)
 		(effects
@@ -3305,6 +3685,17 @@
 			(justify left bottom)
 		)
 		(uuid "65e8b2cb-2513-4fef-81c9-f78fed2f275e")
+	)
+	(text "The standard build uses Pololu Item #4772 JST-SH\nside entry break out boards for the motor connections.\n\nShort JST-SH to JST-SH cables are required and\nbuilders should ignore the markings on the Pololu\npart as these show Pololu pin sequencing whereas\nGemini uses Pimoroni encoders.\n\nAlternative methods of connecting the motors to the\nchassis can be used at the builders discretion\neg direct solder to pads or fitting right angle header\nand connecting with DuPont style connectors.\n"
+		(exclude_from_sim no)
+		(at 13.716 110.236 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7d53ca46-492b-44e1-9bea-e9e157ba8850")
 	)
 	(text "BATTERY"
 		(exclude_from_sim no)
@@ -3369,7 +3760,7 @@
 		)
 		(uuid "df60bf49-19e9-4884-b995-b4c449178b8c")
 	)
-	(text "LEFT MOTOR"
+	(text "LEFT MOTOR BREAKOUT"
 		(exclude_from_sim no)
 		(at 25.4 153.67 0)
 		(effects
@@ -3402,7 +3793,7 @@
 	)
 	(global_label "Vcc"
 		(shape input)
-		(at 40.64 171.45 0)
+		(at 40.64 173.99 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3412,7 +3803,7 @@
 		)
 		(uuid "0cd069a2-3349-4129-9556-cbcd811490ff")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 46.891 171.45 0)
+			(at 46.891 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3424,7 +3815,7 @@
 	)
 	(global_label "LQB"
 		(shape input)
-		(at 44.45 130.81 0)
+		(at 44.45 143.51 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3434,7 +3825,7 @@
 		)
 		(uuid "107a9c2d-28d6-431e-a1d6-8531488b1b4b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 51.0638 130.81 0)
+			(at 51.0638 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3556,7 +3947,7 @@
 	)
 	(global_label "RQA"
 		(shape input)
-		(at 40.64 168.91 0)
+		(at 40.64 176.53 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3566,7 +3957,7 @@
 		)
 		(uuid "29aa22fd-43d2-46cf-82ed-9cefd8c35dff")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 47.3143 168.91 0)
+			(at 47.3143 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3600,7 +3991,7 @@
 	)
 	(global_label "RQB"
 		(shape input)
-		(at 40.64 166.37 0)
+		(at 40.64 179.07 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3610,7 +4001,7 @@
 		)
 		(uuid "32401372-e0a3-4dbf-a365-c22d88b27905")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 47.4957 166.37 0)
+			(at 47.4957 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3622,7 +4013,7 @@
 	)
 	(global_label "LEFT_MOTOR_1"
 		(shape input)
-		(at 44.45 138.43 0)
+		(at 44.45 135.89 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3632,7 +4023,7 @@
 		)
 		(uuid "375b9d35-bd12-4788-900e-84eecea6fc0d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.1632 138.43 0)
+			(at 61.1632 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3688,7 +4079,7 @@
 	)
 	(global_label "Vcc"
 		(shape input)
-		(at 44.45 135.89 0)
+		(at 44.45 138.43 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3698,7 +4089,7 @@
 		)
 		(uuid "5de9b9c8-41c0-464c-9285-3871ebdfe0c6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 50.701 135.89 0)
+			(at 50.701 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3776,7 +4167,7 @@
 	)
 	(global_label "RIGHT_MOTOR_1"
 		(shape input)
-		(at 40.64 173.99 0)
+		(at 40.64 171.45 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3786,7 +4177,7 @@
 		)
 		(uuid "85cc7b6a-8a49-4eb3-9ee7-a24b9d77073d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 58.5628 173.99 0)
+			(at 58.5628 171.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3820,7 +4211,7 @@
 	)
 	(global_label "LEFT_MOTOR_2"
 		(shape input)
-		(at 44.45 140.97 0)
+		(at 44.45 133.35 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3830,7 +4221,7 @@
 		)
 		(uuid "968f3c30-3069-4dac-8ddb-2f3816c5c656")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 61.1632 140.97 0)
+			(at 61.1632 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3908,7 +4299,7 @@
 	)
 	(global_label "LQA"
 		(shape input)
-		(at 44.45 133.35 0)
+		(at 44.45 140.97 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3918,7 +4309,7 @@
 		)
 		(uuid "a18d8063-bda3-4e83-afbe-c8e08a49e0d2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 50.8824 133.35 0)
+			(at 50.8824 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4128,7 +4519,7 @@
 	)
 	(global_label "RIGHT_MOTOR_2"
 		(shape input)
-		(at 40.64 176.53 0)
+		(at 40.64 168.91 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4138,7 +4529,7 @@
 		)
 		(uuid "f435b4b4-cfaa-4e2a-b76d-8e0222d4570e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 58.5628 176.53 0)
+			(at 58.5628 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4191,7 +4582,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "DC Motor Controller https://amzn.eu/d/csv7cRr as an option"
+			(at 116.84 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
+			(at 116.84 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" ""
 			(at 116.84 76.2 0)
 			(effects
 				(font
@@ -4246,6 +4655,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:Battery")
+		(at 262.89 59.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "10fea7cf-7774-4c8f-a2a1-4fa20887f090")
+		(property "Reference" "BT1"
+			(at 266.7 57.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "9v Battery"
+			(at 266.7 60.3884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 262.89 58.166 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 262.89 58.166 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "PP3 9v Battery"
+			(at 262.89 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "32c7948e-a796-4c96-81b6-dc327388f425")
+		)
+		(pin "1"
+			(uuid "12a9616d-60d5-44bd-a9c0-1e609544b085")
+		)
+		(instances
+			(project ""
+				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
+					(reference "BT1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 109.22 74.93 270)
 		(unit 1)
@@ -4289,6 +4768,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 109.22 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "707-8369 "
 			(at 109.22 74.93 0)
 			(effects
 				(font
@@ -4499,6 +4987,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "793-1346 "
+			(at 236.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "010c79b0-299e-4b0c-b115-18473866114f")
 		)
@@ -4584,8 +5081,8 @@
 		)
 	)
 	(symbol
-		(lib_id "ukmarsbot:CONN_06LOCK_LONGPADS")
-		(at 30.48 133.35 0)
+		(lib_id "ukmarsbot:Pololu_JST-SH_Side_Entry")
+		(at 30.48 140.97 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4594,7 +5091,7 @@
 		(dnp no)
 		(uuid "3f67e3d6-5854-4f48-a648-8c6a9df476be")
 		(property "Reference" "J1"
-			(at 25.4 144.018 0)
+			(at 23.622 139.954 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -4602,8 +5099,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "CONN_06SILK_FEMALE_PTH"
-			(at 25.4 123.444 0)
+		(property "Value" "Pololu Item #4772"
+			(at 25.4 131.064 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -4612,8 +5109,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal"
-			(at 30.48 133.35 0)
+		(property "Footprint" "ukmarsbot:Connector_Pololu_JST-SH_side_entry_breakout"
+			(at 30.48 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4621,8 +5118,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 30.48 133.35 0)
+		(property "Datasheet" "~"
+			(at 30.48 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4630,8 +5127,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 30.48 133.35 0)
+		(property "Description" "Single row, 01x06, JST-SH breakout"
+			(at 31.242 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4639,8 +5136,17 @@
 				(hide yes)
 			)
 		)
-		(property "Note" "6 pin header, 0.1\", male"
-			(at 30.48 133.35 0)
+		(property "Note" "6 pin 0.1\" breakout"
+			(at 30.48 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
+			(at 30.48 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4676,7 +5182,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 220.98 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4686,7 +5192,7 @@
 		(fields_autoplaced yes)
 		(uuid "5e46aaf6-4eca-4f1b-a0f6-e7730f50983e")
 		(property "Reference" "C1"
-			(at 224.79 109.6009 0)
+			(at 224.79 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4695,7 +5201,7 @@
 			)
 		)
 		(property "Value" "0.22uF"
-			(at 224.79 112.1409 0)
+			(at 224.79 113.0299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4721,7 +5227,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 220.98 111.76 0)
 			(effects
 				(font
@@ -4731,6 +5237,15 @@
 			)
 		)
 		(property "Note" "Maximum height is 10mm"
+			(at 220.98 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "194-0629 "
 			(at 220.98 111.76 0)
 			(effects
 				(font
@@ -4759,7 +5274,7 @@
 		(at 99.06 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -4810,6 +5325,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 99.06 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 99.06 173.99 0)
 			(effects
 				(font
@@ -4895,7 +5419,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 40.64 163.83 90)
+		(at 40.64 181.61 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4904,7 +5428,7 @@
 		(fields_autoplaced yes)
 		(uuid "78d02171-9bdc-4a86-bb2b-1ef27b745643")
 		(property "Reference" "#PWR01"
-			(at 46.99 163.83 0)
+			(at 46.99 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4913,7 +5437,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 44.45 163.8299 90)
+			(at 44.45 181.6099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4922,7 +5446,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 40.64 163.83 0)
+			(at 40.64 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4931,7 +5455,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 40.64 163.83 0)
+			(at 40.64 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4940,7 +5464,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 40.64 163.83 0)
+			(at 40.64 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5023,6 +5547,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 200.66 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "55d49ff1-6baa-459f-bf95-13c5d60e7dae")
 		)
@@ -5091,7 +5624,16 @@
 				(hide yes)
 			)
 		)
-		(property "Note" "> 2A rectifier. Shottky is good"
+		(property "Note" "Polarity protection diode"
+			(at 247.65 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "628-9451 "
 			(at 247.65 36.83 0)
 			(effects
 				(font
@@ -5120,7 +5662,7 @@
 		(at 99.06 181.61 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5171,6 +5713,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 99.06 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 99.06 181.61 0)
 			(effects
 				(font
@@ -5234,7 +5785,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/6812994"
+			(at 134.62 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "681-2994"
+			(at 134.62 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Might be easier and cheaper to just cut from bigger lengths"
 			(at 134.62 30.48 0)
 			(effects
 				(font
@@ -5289,7 +5858,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100uF,16V"
+		(property "Value" "100uF, 16V"
 			(at 94.361 131.6232 0)
 			(effects
 				(font
@@ -5334,6 +5903,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "176-3779 or 173-9417"
+			(at 91.44 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2a46800b-7c68-4442-aab8-761044041f91")
 		)
@@ -5350,7 +5928,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
+		(lib_id "Device:C")
 		(at 247.65 111.76 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5360,7 +5938,7 @@
 		(fields_autoplaced yes)
 		(uuid "b3963a2f-2a74-4e01-a37e-b8a2c6f575b7")
 		(property "Reference" "C2"
-			(at 251.46 109.6009 0)
+			(at 251.46 110.4899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5369,7 +5947,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 251.46 112.1409 0)
+			(at 251.46 113.0299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5395,7 +5973,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Unpolarized capacitor"
 			(at 247.65 111.76 0)
 			(effects
 				(font
@@ -5405,6 +5983,15 @@
 			)
 		)
 		(property "Note" "Maximum height is 10mm"
+			(at 247.65 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "538-1433 "
 			(at 247.65 111.76 0)
 			(effects
 				(font
@@ -5541,7 +6128,25 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "https://uk.rs-online.com/web/p/pcb-headers/6812994"
+			(at 101.6 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "681-2994"
+			(at 101.6 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "Might be easier and cheaper to just cut from bigger lengths"
 			(at 101.6 26.67 0)
 			(effects
 				(font
@@ -5578,8 +6183,8 @@
 		)
 	)
 	(symbol
-		(lib_id "ukmarsbot:CONN_06LOCK_LONGPADS")
-		(at 30.48 168.91 0)
+		(lib_id "ukmarsbot:Pololu_JST-SH_Side_Entry")
+		(at 30.48 176.53 0)
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5588,7 +6193,7 @@
 		(dnp no)
 		(uuid "bc534ece-987e-43f3-ac10-02f6b13c9780")
 		(property "Reference" "J2"
-			(at 25.4 179.578 0)
+			(at 24.384 175.514 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -5596,8 +6201,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "CONN_06SILK_FEMALE_PTH"
-			(at 25.4 159.004 0)
+		(property "Value" "Pololu Item #4772"
+			(at 25.4 166.624 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -5606,8 +6211,8 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal"
-			(at 30.48 168.91 0)
+		(property "Footprint" "ukmarsbot:Connector_Pololu_JST-SH_side_entry_breakout"
+			(at 30.48 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5615,8 +6220,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 30.48 168.91 0)
+		(property "Datasheet" "~"
+			(at 30.48 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5624,8 +6229,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 30.48 168.91 0)
+		(property "Description" "Single row, 01x06, JST-SH breakout"
+			(at 31.242 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5634,7 +6239,16 @@
 			)
 		)
 		(property "Note" "6 pin header, 0.1\", male"
-			(at 30.48 168.91 0)
+			(at 30.48 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
+			(at 30.48 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5733,6 +6347,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "176-3779 or 173-9417"
+			(at 115.57 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "808b85e4-7079-4fcd-ab2a-8ae4b84fd7cc")
 		)
@@ -5753,7 +6376,7 @@
 		(at 118.11 181.61 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5804,6 +6427,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 118.11 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 118.11 181.61 0)
 			(effects
 				(font
@@ -5959,7 +6591,7 @@
 		(at 78.74 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6018,6 +6650,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 78.74 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
@@ -6029,7 +6670,7 @@
 	)
 	(symbol
 		(lib_id "ukmarsbot:GEARMOTOR")
-		(at 26.67 77.47 0)
+		(at 26.67 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6038,7 +6679,7 @@
 		(fields_autoplaced yes)
 		(uuid "cd27c346-880c-4333-bc75-e90b9e47bfd2")
 		(property "Reference" "M2"
-			(at 30.6832 79.1753 0)
+			(at 30.6832 82.9853 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6046,8 +6687,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Right MOTOR"
-			(at 30.6832 81.7122 0)
+		(property "Value" "N20 MOTOR"
+			(at 30.6832 85.5222 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6056,7 +6697,7 @@
 			)
 		)
 		(property "Footprint" "ukmarsbot:MINI-METAL-GEARMOTOR-WITH-BRACKET"
-			(at 26.67 78.486 0)
+			(at 26.67 82.296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6065,7 +6706,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 26.67 78.486 0)
+			(at 26.67 82.296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6073,8 +6714,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 26.67 77.47 0)
+		(property "Description" "https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683"
+			(at 26.67 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6082,8 +6723,17 @@
 				(hide yes)
 			)
 		)
-		(property "Note" "commercial mounts need bushing for screws"
-			(at 26.67 77.47 0)
+		(property "Note" "Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws"
+			(at 26.67 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "NA"
+			(at 26.67 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6102,7 +6752,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 44.45 128.27 90)
+		(at 44.45 146.05 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6111,7 +6761,7 @@
 		(fields_autoplaced yes)
 		(uuid "ce84f2a1-e30a-4ced-82e3-c37138a49697")
 		(property "Reference" "#PWR02"
-			(at 50.8 128.27 0)
+			(at 50.8 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6120,7 +6770,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 48.26 128.2699 90)
+			(at 48.26 146.0499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6129,7 +6779,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 44.45 128.27 0)
+			(at 44.45 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6138,7 +6788,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 44.45 128.27 0)
+			(at 44.45 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6147,7 +6797,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 44.45 128.27 0)
+			(at 44.45 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6235,7 +6885,8 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x03")
-		(at 228.6 43.18 270)
+		(at 228.6 43.18 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6243,7 +6894,7 @@
 		(dnp no)
 		(uuid "e2d72c0c-8ec1-4628-98d6-a73f1c9825cb")
 		(property "Reference" "J7"
-			(at 233.68 41.9099 90)
+			(at 223.52 41.9099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6252,7 +6903,7 @@
 			)
 		)
 		(property "Value" "Switch"
-			(at 222.758 46.482 90)
+			(at 234.442 46.482 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6260,7 +6911,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" "ukmarsbot:UKMARSBOT_SW_Slide-03_With_Mounting_Pads"
 			(at 228.6 43.18 0)
 			(effects
 				(font
@@ -6278,7 +6929,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" ""
+			(at 228.6 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 228.6 43.18 0)
 			(effects
 				(font
@@ -6310,7 +6970,7 @@
 		(at 118.11 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6361,6 +7021,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 118.11 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 118.11 173.99 0)
 			(effects
 				(font
@@ -6463,7 +7132,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Left MOTOR"
+		(property "Value" "N20 MOTOR"
 			(at 30.6832 63.9322 0)
 			(effects
 				(font
@@ -6490,7 +7159,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683"
 			(at 26.67 59.69 0)
 			(effects
 				(font
@@ -6499,7 +7168,16 @@
 				(hide yes)
 			)
 		)
-		(property "Note" "commercial mounts need bushing for screws"
+		(property "Note" "Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws"
+			(at 26.67 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "NA"
 			(at 26.67 59.69 0)
 			(effects
 				(font
@@ -6522,7 +7200,7 @@
 		(at 78.74 181.61 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -6573,6 +7251,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 78.74 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 78.74 181.61 0)
 			(effects
 				(font

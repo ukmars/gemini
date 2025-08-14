@@ -1,0 +1,14 @@
+Reference,Value,Qty,Note,Description,RSONLINE
+C1 C2,"100uF, 16v",2,,Unpolarized capacitor,739-6799
+D1 D2 D3,LED,3,,Light emitting diode,"""228-6004 or  228-5562 or  713-3974 or  813-4845"""
+DLED1 DLED2 FLED1,TLCR5800,3,,Light emitting diode,818-7540
+FPD1 LDPD1 RDPD1,BPW85C,3,,Photodiode,815-1263
+J1,Conn_01x16,1,https://uk.rs-online.com/web/p/pcb-sockets/6816820 Can also be found on ebay slightly cheaper,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)",681-6820
+Q1 Q2,BC337-40,2,,"NPN transistor, emitter/base/collector",671-1119
+R4 R6,10K,2,,Resistor,707-7745
+R7 R8 R9,10R,3,,Resistor,707-8580
+R15,1k8,1,,Resistor,707-8675
+R11 R13,2k2,2,,Resistor,707-8255
+R2,33R,1,,Resistor,707-8805
+R1 R3,390R,2,,Resistor,707-7634
+R10 R12 R14,680R,3,,Resistor,707-8211

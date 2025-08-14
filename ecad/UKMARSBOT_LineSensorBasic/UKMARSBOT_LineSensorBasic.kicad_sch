@@ -3858,6 +3858,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "707-8211 "
+			(at 232.41 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6c14333b-d508-4bca-a026-92e7665ab299")
 		)
@@ -3995,6 +4004,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "707-8211 "
+			(at 180.34 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d8cd6b99-e61c-45bf-ba01-6799abfdb62a")
 		)
@@ -4057,6 +4075,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 250.19 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "707-8211 "
 			(at 250.19 53.34 0)
 			(effects
 				(font
@@ -4135,6 +4162,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "818-7540 "
+			(at 161.29 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "443a6147-b042-4d5f-8455-4bafb4eac449")
 		)
@@ -4196,6 +4232,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 120.65 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "707-7745 "
 			(at 120.65 45.72 0)
 			(effects
 				(font
@@ -4274,6 +4319,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "818-7540 "
+			(at 129.54 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3e7011e7-f6fa-4dfb-b5e0-eebf539823f0")
 		)
@@ -4334,6 +4388,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 147.32 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "707-7634 "
 			(at 147.32 86.36 0)
 			(effects
 				(font
@@ -4403,6 +4466,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 232.41 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "\"228-6004 or  228-5562 or  713-3974 or  813-4845\" "
 			(at 232.41 44.45 0)
 			(effects
 				(font
@@ -4615,6 +4687,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "707-8580 "
+			(at 146.05 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c0f3253a-98c8-449c-989b-db09953314ba")
 		)
@@ -4677,6 +4758,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 177.8 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "815-1263 "
 			(at 177.8 143.51 0)
 			(effects
 				(font
@@ -4754,6 +4844,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "\"228-6004 or  228-5562 or  713-3974 or  813-4845\" "
+			(at 250.19 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4b2c1e7b-e07b-4a70-90ab-a4063d4f2eb2")
 		)
@@ -4815,6 +4914,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 213.36 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "\"228-6004 or  228-5562 or  713-3974 or  813-4845\" "
 			(at 213.36 44.45 0)
 			(effects
 				(font
@@ -4891,6 +4999,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "707-7634 "
+			(at 115.57 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a2be704f-5a3c-4e4a-b32b-124e8783325b")
 		)
@@ -4953,6 +5070,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 127 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "671-1119 "
 			(at 127 41.91 0)
 			(effects
 				(font
@@ -5033,6 +5159,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "739-6799 "
+			(at 52.07 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "897a84bf-46ed-48a8-ab4c-5bad73b2c3a1")
 		)
@@ -5103,6 +5238,24 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "681-6820"
+			(at 31.75 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Note" "https://uk.rs-online.com/web/p/pcb-sockets/6816820 Need to be cut down"
+			(at 31.75 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1366240d-4a21-469a-801e-297f6fc9948e")
 		)
@@ -5165,7 +5318,7 @@
 		(at 116.84 180.34 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5216,6 +5369,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 116.84 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 116.84 180.34 0)
 			(effects
 				(font
@@ -5280,6 +5442,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 132.08 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "707-8211 "
 			(at 132.08 127 0)
 			(effects
 				(font
@@ -5358,6 +5529,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "707-8211 "
+			(at 106.68 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "28f9edd6-f487-4665-8e30-87fb85baeab8")
 		)
@@ -5378,7 +5558,7 @@
 		(at 116.84 187.96 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -5429,6 +5609,15 @@
 			)
 		)
 		(property "Note" "Check finished size is M3 (3.2mm)"
+			(at 116.84 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" ""
 			(at 116.84 187.96 0)
 			(effects
 				(font
@@ -5493,6 +5682,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 161.29 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "707-8580 "
 			(at 161.29 69.85 0)
 			(effects
 				(font
@@ -5638,6 +5836,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "815-1263 "
+			(at 129.54 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "41e65f17-07cb-4b86-be60-faf0ea9efb41")
 		)
@@ -5708,6 +5915,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "818-7540 "
+			(at 146.05 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3cf05043-c563-4436-8a0e-277a165c3638")
 		)
@@ -5770,6 +5986,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 157.48 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "707-8211 "
 			(at 157.48 127 0)
 			(effects
 				(font
@@ -5915,6 +6140,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "707-8211 "
+			(at 213.36 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ee7d899e-d311-4ef6-b0a4-70bcfd2d8bde")
 		)
@@ -5985,6 +6219,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "707-8580 "
+			(at 129.54 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "56e68b9e-47e6-43d2-985e-43b97d82bf24")
 		)
@@ -6046,6 +6289,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 152.4 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "707-7745 "
 			(at 152.4 90.17 0)
 			(effects
 				(font
@@ -6124,6 +6376,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "739-6799 "
+			(at 22.86 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "df510848-7cd9-44cb-8bf1-f269eda9f94f")
 		)
@@ -6186,6 +6447,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 158.75 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "671-1119 "
 			(at 158.75 86.36 0)
 			(effects
 				(font
@@ -6267,6 +6537,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" ""
+			(at 52.07 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "bc7c0bba-7928-403c-ad5f-8717119640de")
 		)
@@ -6337,6 +6616,15 @@
 				(hide yes)
 			)
 		)
+		(property "RSONLINE" "815-1263 "
+			(at 104.14 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "53cfa9f5-7a6b-4ef6-9e4b-dd7707a2901b")
 		)
@@ -6399,6 +6687,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 154.94 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RSONLINE" "815-1263 "
 			(at 154.94 143.51 0)
 			(effects
 				(font
