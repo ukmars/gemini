@@ -5,9 +5,9 @@
 	(uuid "d8f89e6a-e7a3-4b50-a378-920a806c8e2d")
 	(paper "A4")
 	(title_block
-		(title "UKMARS Gemini Chassis")
-		(date "2025-03-14")
-		(rev "1")
+		(title "UKMARS Gemini Chassis 2.0")
+		(date "2025-07-07")
+		(rev "2")
 	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x02"
@@ -3422,7 +3422,7 @@
 			)
 		)
 	)
-	(global_label "LQA"
+	(global_label "LQB"
 		(shape input)
 		(at 44.45 130.81 0)
 		(fields_autoplaced yes)
@@ -3434,7 +3434,7 @@
 		)
 		(uuid "107a9c2d-28d6-431e-a1d6-8531488b1b4b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 58.4418 130.81 0)
+			(at 51.0638 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3554,7 +3554,7 @@
 			)
 		)
 	)
-	(global_label "RQB"
+	(global_label "RQA"
 		(shape input)
 		(at 40.64 168.91 0)
 		(fields_autoplaced yes)
@@ -3566,7 +3566,7 @@
 		)
 		(uuid "29aa22fd-43d2-46cf-82ed-9cefd8c35dff")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 56.0228 168.91 0)
+			(at 47.3143 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3598,7 +3598,7 @@
 			)
 		)
 	)
-	(global_label "RQA"
+	(global_label "RQB"
 		(shape input)
 		(at 40.64 166.37 0)
 		(fields_autoplaced yes)
@@ -3610,7 +3610,7 @@
 		)
 		(uuid "32401372-e0a3-4dbf-a365-c22d88b27905")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.8414 166.37 0)
+			(at 47.4957 166.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3642,7 +3642,7 @@
 			)
 		)
 	)
-	(global_label "RQA"
+	(global_label "RQB"
 		(shape input)
 		(at 147.32 30.48 0)
 		(fields_autoplaced yes)
@@ -3654,7 +3654,7 @@
 		)
 		(uuid "557a9708-dc02-4e8d-9cb8-082631d6caa2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.9943 30.48 0)
+			(at 154.1757 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3862,7 +3862,7 @@
 			)
 		)
 	)
-	(global_label "LQA"
+	(global_label "LQB"
 		(shape input)
 		(at 147.32 35.56 0)
 		(fields_autoplaced yes)
@@ -3874,7 +3874,7 @@
 		)
 		(uuid "9b23642a-a3fa-416d-9a8b-15768a9489d8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.7524 35.56 0)
+			(at 153.9338 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3906,7 +3906,7 @@
 			)
 		)
 	)
-	(global_label "LQB"
+	(global_label "LQA"
 		(shape input)
 		(at 44.45 133.35 0)
 		(fields_autoplaced yes)
@@ -3918,7 +3918,7 @@
 		)
 		(uuid "a18d8063-bda3-4e83-afbe-c8e08a49e0d2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 58.6232 133.35 0)
+			(at 50.8824 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3928,7 +3928,7 @@
 			)
 		)
 	)
-	(global_label "RQB"
+	(global_label "RQA"
 		(shape input)
 		(at 147.32 27.94 0)
 		(fields_autoplaced yes)
@@ -3940,7 +3940,7 @@
 		)
 		(uuid "a3ead6a8-6c65-4873-a1ba-a72326a66b0d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 154.1757 27.94 0)
+			(at 153.9943 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4104,7 +4104,7 @@
 			)
 		)
 	)
-	(global_label "LQB"
+	(global_label "LQA"
 		(shape input)
 		(at 147.32 33.02 0)
 		(fields_autoplaced yes)
@@ -4116,7 +4116,7 @@
 		)
 		(uuid "e3171024-09d2-495d-ab9e-69775d8b7290")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 153.9338 33.02 0)
+			(at 153.7524 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4612,7 +4612,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "ukmarsbot:1X06_LOCK_LONGPADS"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal"
 			(at 30.48 133.35 0)
 			(effects
 				(font
@@ -4987,7 +4987,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 200.66 36.83 0)
 			(effects
 				(font
@@ -5216,7 +5216,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
 			(at 134.62 30.48 0)
 			(effects
 				(font
@@ -5289,7 +5289,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330uF, 16V"
+		(property "Value" "100uF,16V"
 			(at 94.361 131.6232 0)
 			(effects
 				(font
@@ -5298,7 +5298,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
 			(at 92.4052 134.62 0)
 			(effects
 				(font
@@ -5523,7 +5523,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical"
 			(at 101.6 26.67 0)
 			(effects
 				(font
@@ -5606,7 +5606,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "ukmarsbot:1X06_LOCK_LONGPADS"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal"
 			(at 30.48 168.91 0)
 			(effects
 				(font
@@ -5688,7 +5688,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330uF, 16V"
+		(property "Value" "100uF, 16V"
 			(at 118.491 131.6232 0)
 			(effects
 				(font
@@ -5697,7 +5697,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
 			(at 116.5352 134.62 0)
 			(effects
 				(font
