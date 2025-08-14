@@ -2,7 +2,7 @@ Reference,Value,Qty,Note,Description,RSONLINE
 BT1,9v Battery,1,,PP3 9v Battery,
 C2,0.1uF,1,Maximum height is 10mm,,538-1433
 C1,0.22uF,1,Maximum height is 10mm,,194-0629
-C3 C4,"100uF, 16V",2,Maximum height is 10mm,,176-3779
+C3 C4,"100uF, 16V",2,Maximum height is 10mm,,176-3779 or 173-9417
 D1,1N5401,1,> 2A rectifier. Shottky is good,,628-9451
 J1 J2,CONN_06SILK_FEMALE_PTH,2,"6 pin header, 0.1"", male",https://uk.rs-online.com/web/p/pcb-headers/2518654 Packs are a bit cheaper on ebay These will need to be cut to right size,251-8654
 J3 J4 J6 J7,Conn_01x06,4,"Might be easier and cheaper to just cut from bigger lengths 0.1"" pitch, polarised, any type","Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/) Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)",681-2994
