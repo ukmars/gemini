@@ -1,14 +1,14 @@
-Reference,Value,Qty,Note,Description,RSONLINE
-C1 C2,100uF,2,,Polarized capacitor,739-6799
-D5,Line,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845"""
-D4,Radius,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845"""
-D6,S/Finish,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845"""
-D1 D2 D7,TLCR5800,3,,,818-7540
-J1,Conn_01x16,1,https://uk.rs-online.com/web/p/pcb-sockets/6816820 Need to be cut down,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)",681-6820
-Q1 Q6,BC337-40,2,,,671-1119
-Q2 Q3 Q4 Q5,BPW85C,4,,,815-1263
-R4 R16,10K,2,,,707-7745
-R3 R5 R17,10R,3,,,707-8580
-R2 R15,390R,2,,,707-7634
-R1,50R,1,,Resistor,
-R7 R8 R9 R10 R11 R12 R14,680R,7,,,707-8211
+Reference,Value,Qty,Note,Description,RSONLINE,RAPID
+C1 C2,100uF,2,,Polarized capacitor,739-6799,11-4109
+D5,Line,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845""",56-0405
+D4,Radius,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845""",56-0400
+D6,S/Finish,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845""",56-0410
+D1 D2 D7,TLCR5800,3,,,818-7540,55-0066
+J1,Conn_01x16,1,https://uk.rs-online.com/web/p/pcb-sockets/6816820 Need to be cut down,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)",681-6820,19-0087
+Q1 Q6,BC337-40,2,,,671-1119,50-3113
+Q2 Q3 Q4 Q5,BPW85C,4,,,815-1263,
+R4 R16,10K,2,,,707-7745,62-0394
+R3 R5 R17,10R,3,,,707-8580,62-0326
+R2 R15,390R,2,,,707-7634,62-0360
+R1,50R,1,,Resistor,707-8817,62-0334
+R7 R8 R9 R10 R11 R12 R14,680R,7,,,707-8211,64-0068

@@ -1,6 +1,6 @@
-Reference,Value,Qty,Note,Description,RSONLINE
-D1 D2,LED,2,,Light emitting diode,"""228-6004 or  228-5562 or  713-3974 or  813-4845"""
-J1 J2 J3 J4 J5,Conn_01x16,5,Might be easier and cheaper to just cut from bigger lengths Cut from a bigger strip of 2.54 header,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/) Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/) Generic connector, single row, 01x04, script generated",681-3007 681-2994
-R1 R2,680R,2,,Resistor,707-8211
-SW1 SW2 SW3,TACT_SW,3,,TACT switch 6mm 4.5mm,479-1390P
-U1,Pico,1,,,
+Reference,Value,Qty,Note,Description,RSONLINE,RAPID
+D1 D2,LED,2,,Light emitting diode,"""228-6004 or  228-5562 or  713-3974 or  813-4845""",56-0400 and 56-0405
+J1 J2 J3 J4 J5,Conn_01x16,5,Might be easier and cheaper to just cut from bigger lengths Cut from a bigger strip of 2.54 header,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/) Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/) Generic connector, single row, 01x04, script generated",681-3007 681-2994,08-7948 01-5723 01-5835
+R1 R2,680R,2,,Resistor,707-8211,64-0068
+SW1 SW2 SW3,TACT_SW,3,,TACT switch 6mm 4.5mm,479-1390P,78-3821
+U1,Pico,1,,,,08-7949 and 75-1230
