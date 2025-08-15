@@ -1,7 +1,11 @@
 # * Project:    UKMARS Gemini
 # * File:       GeminiBasicLineFollower.py
+# * Updated for V2 board configuration
+#
 # * Author:     Ian Butterworth
 # * Created:    21 May 2025
+# * Updated:	12 August 2025
+# *
 # * Description:
 # *     Simple example line following code for the UKMARS Gemini platform with PiPico.
 # *     This code does not require that encoders are available.
@@ -50,8 +54,8 @@ onBoardLED = Pin("LED", Pin.OUT)
 leftSensorLED = Pin(21,Pin.OUT)
 centreSensorLED = Pin(20,Pin.OUT)
 rightSensorLED = Pin(19,Pin.OUT)
-leftMezzLED = Pin(10,Pin.OUT)
-rightMezzLED = Pin(11,Pin.OUT)
+leftMezzLED = Pin(12,Pin.OUT)
+rightMezzLED = Pin(13,Pin.OUT)
 
 leftRev = PWM(Pin(3))
 leftRev.freq(2000)
@@ -79,8 +83,8 @@ loopPeriod = 4  #Delay between control loop iterations in mS - control loop freq
 error = 0       #Delay should be as small as possible but give enough time for the logging data transmission over bluetooth
 oldError = 0
 change = 0
-kp    = 2.5
-kd = 3000       #differential constant defined as the multiplier of change in error per second
+kp    = 0.75 #0.5 #1 #2.5
+kd = 1000 #500 #2000 #1500 #1000 #1500 #3000       #differential constant defined as the multiplier of change in error per second
 kdLoop = kd * loopPeriod / 1000 #The actual constant applied in the loop needs to scale for the duration of the loop
 speed = 20      #between 0 and 100
 pErrorTerm = 0
