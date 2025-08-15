@@ -1,7 +1,9 @@
 # Diagnostic code to verify the correct build of a UKMARS Gemini platform with line follower sensor using Pi Pico
+# Updated for V2 board configuration
 #
 #Author:	Ian Butterworth
-#Date:		29 April 2025
+#Created:	29 April 2025
+#Updated:	11 August 2025
 #
 #Connecting an HC05/HC06 bluetooth module to J2 on the mezzanine processor board will provide wireless reporting
 #of the values measured to a serial monitor eg Putty or mobile phone
@@ -12,7 +14,7 @@
 #1- flash the Gemini indicators and emitters		when done press the right button SW2
 #2- read and display the sensor values				when done press the left button SW1
 #3- read and display the encoder values				when done press the right button SW2
-#4- wiggle the robot								automatically returns to test phase 0
+#4- move the robot forwards then backwards			automatically returns to test phase 0
 #
 #This programm requires diagnosticEncoders.py
 #
@@ -34,16 +36,16 @@ onBoardLED = Pin("LED", Pin.OUT)
 leftRedLED = Pin(21,Pin.OUT)		#Sensor
 centreAmberLED = Pin(20,Pin.OUT)	#Sensor
 rightGreenLED = Pin(19,Pin.OUT)	#Sensor
-leftWhiteLED = Pin(10,Pin.OUT)	#Mezz
-rightBlueLED = Pin(11,Pin.OUT)	#Mezz
+leftWhiteLED = Pin(12,Pin.OUT)	#Mezz
+rightBlueLED = Pin(13,Pin.OUT)	#Mezz
 
-leftRev = PWM(Pin(2))
+leftRev = PWM(Pin(3))
 leftRev.freq(2000)
-leftFwd = PWM(Pin(3))
+leftFwd = PWM(Pin(2))
 leftFwd.freq(2000)
-rightRev = PWM(Pin(4))
+rightRev = PWM(Pin(5))
 rightRev.freq(2000)
-rightFwd = PWM(Pin(5))
+rightFwd = PWM(Pin(4))
 rightFwd.freq(2000)
 leftButton = Pin(15, Pin.IN, Pin.PULL_UP)
 rightButton = Pin(14, Pin.IN, Pin.PULL_UP)
@@ -273,20 +275,15 @@ while True:
         time.sleep_ms(2)
 
 
-#Now wiggle the robot a few times
+#Now move the robot forwards then backwards
 #If the robot is only being powered by the USB connector lift it off the surface to allow the motors to work!
-    for pulses in range(0,5):
-        leftCount, rightCount = encoders.get_counts(True)
-        rightMotor(50)
-        leftMotor(-50)
-        while rightCount < 20:
-            leftCount, rightCount = encoders.get_counts(False)
-        stopMotors()
-        time.sleep_ms(500)
-        leftCount, rightCount = encoders.get_counts(True)
-        rightMotor(-50)
-        leftMotor(50)
-        while leftCount < 20:
-            leftCount, rightCount = encoders.get_counts(False)
-        stopMotors()
-        time.sleep_ms(500)
+    rightMotor(35)
+    leftMotor(35)
+    time.sleep_ms(500)
+    stopMotors()
+    time.sleep_ms(500)
+    rightMotor(-35)
+    leftMotor(-35)
+    time.sleep_ms(500)
+    stopMotors()
+    time.sleep_ms(500)
