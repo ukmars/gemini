@@ -5258,7 +5258,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
 			(at 53.0352 41.91 0)
 			(effects
 				(font
@@ -5285,7 +5285,16 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" "739-6799 "
+		(property "RSONLINE" "176-3779"
+			(at 52.07 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" "11-4109"
 			(at 52.07 38.1 0)
 			(effects
 				(font
@@ -6592,7 +6601,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
 			(at 23.8252 41.91 0)
 			(effects
 				(font
@@ -6619,7 +6628,16 @@
 				(hide yes)
 			)
 		)
-		(property "RSONLINE" "739-6799 "
+		(property "RSONLINE" "176-3779 "
+			(at 22.86 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" "11-4109"
 			(at 22.86 38.1 0)
 			(effects
 				(font

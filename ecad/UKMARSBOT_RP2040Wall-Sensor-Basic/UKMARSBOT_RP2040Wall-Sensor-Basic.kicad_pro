@@ -508,7 +508,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "C:/Users/Ian/Documents/GitHub/gemini/ecad/UKMARSBOT_RP2040Wall-Sensor-Basic/fab/",
+      "plot": "fab/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "UKMARSBOT_RP2040Wall-Sensor-Basic.step",
