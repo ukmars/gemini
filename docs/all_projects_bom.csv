@@ -1,5 +1,5 @@
 Project,Reference,Value,Qty,Note,Description,RSONLINE,RAPID
-UKMARSBOT_LineSensorBasic,C1 C2,100uF,2,,Polarized capacitor,739-6799,11-4109
+UKMARSBOT_LineSensorBasic,C1 C2,100uF,2,,Polarized capacitor,176-3779,11-4109
 UKMARSBOT_LineSensorBasic,D1 D2 D7,TLCR5800,3,,,818-7540,55-0066
 UKMARSBOT_LineSensorBasic,D4,Radius,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845""",56-0400
 UKMARSBOT_LineSensorBasic,D5,Line,1,,,"""228-6004 or  228-5562 or  713-3974 or  813-4845""",56-0405
@@ -7,7 +7,7 @@ UKMARSBOT_LineSensorBasic,D6,S/Finish,1,,,"""228-6004 or  228-5562 or  713-3974 
 UKMARSBOT_LineSensorBasic,J1,Conn_01x16,1,https://uk.rs-online.com/web/p/pcb-sockets/6816820 Need to be cut down,"Generic connector, single row, 01x16, script generated (kicad-library-utils/schlib/autogen/connector/)",681-6820,19-0087
 UKMARSBOT_LineSensorBasic,Q1 Q6,BC337-40,2,,,671-1119,50-3113
 UKMARSBOT_LineSensorBasic,Q2 Q3 Q4 Q5,BPW85C,4,,,815-1263,
-UKMARSBOT_LineSensorBasic,R1,50R,1,,Resistor,707-8817,62-0334
+UKMARSBOT_LineSensorBasic,R1,47R,1,,Resistor,707-8817,62-0334
 UKMARSBOT_LineSensorBasic,R2 R15,390R,2,,,707-7634,62-0360
 UKMARSBOT_LineSensorBasic,R3 R5 R17,10R,3,,,707-8580,62-0326
 UKMARSBOT_LineSensorBasic,R4 R16,10K,2,,,707-7745,62-0394
@@ -15,7 +15,7 @@ UKMARSBOT_LineSensorBasic,R7 R8 R9 R10 R11 R12 R14,680R,7,,,707-8211,64-0068
 UKMARSBOT_RP2040Chassis,BT1,9v Battery,1,,PP3 9v Battery,,
 UKMARSBOT_RP2040Chassis,C1,0.22uF,1,Maximum height is 10mm,Unpolarized capacitor,194-0629,11-3442
 UKMARSBOT_RP2040Chassis,C2,0.1uF,1,Maximum height is 10mm,Unpolarized capacitor,538-1433,11-4110
-UKMARSBOT_RP2040Chassis,C3 C4,"100uF, 16V",2,Maximum height is 10mm,,176-3779 ,11-0282
+UKMARSBOT_RP2040Chassis,C3 C4,"100uF, 16V",2,Maximum height is 10mm,,176-3779 176-3779 ,11-4109
 UKMARSBOT_RP2040Chassis,D1,1N5401,1,Polarity protection diode,,628-9451,
 UKMARSBOT_RP2040Chassis,J1 J2,Pololu Item #4772,2,"6 pin 0.1"" breakout 6 pin header, 0.1"", male","Single row, 01x06, JST-SH breakout",,22-0795
 UKMARSBOT_RP2040Chassis,J3 J4 J6 J7,Conn_01x06,4,"Might be easier and cheaper to just cut from bigger lengths 0.1"" pitch, polarised, any type",https://uk.rs-online.com/web/p/pcb-headers/6812994,681-2994,01-5723 08-5765 78-0566
