@@ -1,5 +1,5 @@
 # * Project:    UKMARS Gemini
-# * File:       GeminiBasicLineFollower.py
+# * File:       GeminiLineFollower.py
 # * Updated for V2 board configuration
 #
 # * Author:     Ian Butterworth
