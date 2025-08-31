@@ -33,6 +33,7 @@ centreSensorLED = Pin(20,Pin.OUT) # centre indicator LED
 rightSensorLED = Pin(19,Pin.OUT) # right indicator LED
 
 # Variables
+maxspeed = 65535
 
 def readSensors():
     #Values are derived by subtracting the lit value of a sensor from the unlit value 
@@ -69,7 +70,7 @@ def readSensors():
 
 def linefollow():
     global leftSensorValue, rightSensorValue, radiusSensorValue, startSensorValue
-    global leftFrontLow, leftFrontHigh,rightFrontLow, rightFrontHigh
+    global leftFrontLow, leftFrontHigh,rightFrontLow, rightFrontHigh, maxspeed
     leftFrontLow = rightFrontLow = 35000
     leftFrontHigh = rightFrontHigh = 35000
     pfactor = 0.4
@@ -77,12 +78,12 @@ def linefollow():
     preverr = 0
     difference = 0
     basespeed = 11500 
-    leftspeed = basespeed
-    rightspeed = basespeed
-    leftFwd.duty_u16(leftspeed)  # Set left forward speed
-    leftRev.duty_u16(0)      # and reverse speed to zero
-    rightFwd.duty_u16(rightspeed) # Set right forward speed
-    rightRev.duty_u16(0)     # and reverse speed to zero
+    leftspeed = maxspeed - basespeed
+    rightspeed = maxspeed - basespeed
+    leftFwd.duty_u16(maxspeed)  # Set left forward speed to max
+    leftRev.duty_u16(leftspeed)      # and reverse speed to max - desired speed
+    rightFwd.duty_u16(maxspeed) # Set right forward speed to max
+    rightRev.duty_u16(rightspeed)     # and reverse speed to max - desired speed
     while(True):
         readSensors() #read the sensors
         highlow() # capture lowest and highest sensor values
@@ -121,8 +122,12 @@ def linefollow():
         else:
             leftMezzLED.off()
             rightMezzLED.on()
-        leftFwd.duty_u16(leftspeed)  # Set left forward speed
-        rightFwd.duty_u16(rightspeed) # Set right forward speed
+        leftFwd.duty_u16(maxspeed)  # Set left forward speed to max
+        leftspeed = maxspeed - leftspeed
+        leftRev.duty_u16(leftspeed) # Set left forward speed to max - required speed
+        rightFwd.duty_u16(maxspeed) # Set right forward speed to max
+        rightspeed = maxspeed - rightspeed
+        rightRev.duty_u16(rightspeed) # Set left forward speed to max - required speed
         preverr = difference
 
 def highlow():
@@ -146,26 +151,28 @@ def photoshow():
         time.sleep(0.5)
 
 def motortest():
-    # run motors forward and backwards and light the LEDs then stop motors
-    leftMezzLED.on()         # Switch on the left mezzanine LED
-    leftFwd.duty_u16(15000)  # Set left forward speed to 15000
-    leftRev.duty_u16(0)      # and reverse speed to zero
-    rightFwd.duty_u16(15000) # Set right forward speed to 15000
-    rightRev.duty_u16(0)     # and reverse speed to zero
-    time.sleep(5)            # Wait for 5 seconds
-    leftMezzLED.off()        # Switch off the left mezzanine LED
-    rightMezzLED.on()        # Switch on the right mezzanine LED
-    leftRev.duty_u16(15000)  # Set left reverse speed to 15000
-    leftFwd.duty_u16(0)      # and forward speed to zero
-    rightRev.duty_u16(15000) # Set left reverse speed to 15000
-    rightFwd.duty_u16(0)     # and forward speed to zero
-    time.sleep(5)            # Wait for 5 seconds
-    leftMezzLED.off()        # Switch off the left mezzanine LED
-    rightMezzLED.off()       # Switch off the right mezzanine LED
-    leftFwd.duty_u16(0)      # Set left forward speed to zero
-    leftRev.duty_u16(0)      # and reverse speed to zero
-    rightFwd.duty_u16(0)     # Set right forward speed to zero
-    rightRev.duty_u16(0)     # and reverse speed to zero 
+    # Run motors forward and backwards and light the LEDs then stop motors
+    global maxspeed
+    botspeed = maxspeed - 15000 # desired speed of 15000
+    leftMezzLED.on() # Switch on the left mezzanine LED
+    leftFwd.duty_u16(maxspeed) # Set left forward speed to maxspeed
+    leftRev.duty_u16(botspeed) # and reverse speed to maxspeed – desired speed of 15000
+    rightFwd.duty_u16(maxspeed) # Set right forward speed to maxspeed
+    rightRev.duty_u16(botspeed) # and reverse speed to maxspeed – desired speed of 15000
+    time.sleep(5) # Wait for 5 seconds
+    leftMezzLED.off() # Switch off the left mezzanine LED
+    rightMezzLED.on() # Switch on the right mezzanine LED
+    leftRev.duty_u16(maxspeed) # Set left reverse speed to maxspeed
+    leftFwd.duty_u16(botspeed) # and forward speed to desired reverse speed of 15000
+    rightRev.duty_u16(maxspeed) # Set left reverse speed to maxspeed
+    rightFwd.duty_u16(botspeed) # and forward speed to desired reverse speed of 15000
+    time.sleep(5) # Wait for 5 seconds
+    leftMezzLED.off() # Switch off the left mezzanine LED
+    rightMezzLED.off() # Switch off the right mezzanine LED
+    leftFwd.duty_u16(maxspeed) # Set left forward speed to zero
+    leftRev.duty_u16(maxspeed) # and reverse speed to zero
+    rightFwd.duty_u16(maxspeed) # Set right forward speed to zero
+    rightRev.duty_u16(maxspeed) # and reverse speed to zero
 
 
 # code exeecuted when program starts
