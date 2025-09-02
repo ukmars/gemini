@@ -4609,6 +4609,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" ""
+			(at 116.84 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "11"
 			(uuid "a596be2e-4b8f-4d18-99b3-12ea40a8f393")
 		)
@@ -4709,6 +4718,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" ""
+			(at 262.89 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "32c7948e-a796-4c96-81b6-dc327388f425")
 		)
@@ -4777,6 +4795,15 @@
 			)
 		)
 		(property "RSONLINE" "707-8369 "
+			(at 109.22 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" "62-0410"
 			(at 109.22 74.93 0)
 			(effects
 				(font
@@ -4996,6 +5023,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" ""
+			(at 236.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "010c79b0-299e-4b0c-b115-18473866114f")
 		)
@@ -5154,6 +5190,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" "22-0795"
+			(at 30.48 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "792a53f9-05bb-43fc-b20f-4f2d6d0160e7")
 		)
@@ -5254,6 +5299,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" "11-3442"
+			(at 220.98 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8e56aff3-d70c-441a-9924-30e21ccfb7c8")
 		)
@@ -5334,6 +5388,15 @@
 			)
 		)
 		(property "RSONLINE" ""
+			(at 99.06 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" ""
 			(at 99.06 173.99 0)
 			(effects
 				(font
@@ -5556,6 +5619,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" "08-5765"
+			(at 200.66 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "55d49ff1-6baa-459f-bf95-13c5d60e7dae")
 		)
@@ -5634,6 +5706,15 @@
 			)
 		)
 		(property "RSONLINE" "628-9451 "
+			(at 247.65 36.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" ""
 			(at 247.65 36.83 0)
 			(effects
 				(font
@@ -5730,6 +5811,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" ""
+			(at 99.06 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
@@ -5804,6 +5894,15 @@
 			)
 		)
 		(property "Note" "Might be easier and cheaper to just cut from bigger lengths"
+			(at 134.62 30.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" "01-5723"
 			(at 134.62 30.48 0)
 			(effects
 				(font
@@ -5912,6 +6011,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" "11-0282"
+			(at 91.44 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2a46800b-7c68-4442-aab8-761044041f91")
 		)
@@ -5992,6 +6100,15 @@
 			)
 		)
 		(property "RSONLINE" "538-1433 "
+			(at 247.65 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" "11-4110"
 			(at 247.65 111.76 0)
 			(effects
 				(font
@@ -6155,6 +6272,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" "01-5723"
+			(at 101.6 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "83fd64d6-49d4-48d9-9fdd-784a3fd423bb")
 		)
@@ -6248,6 +6374,15 @@
 			)
 		)
 		(property "RSONLINE" ""
+			(at 30.48 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" "22-0795"
 			(at 30.48 176.53 0)
 			(effects
 				(font
@@ -6356,6 +6491,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" "11-0282"
+			(at 115.57 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "808b85e4-7079-4fcd-ab2a-8ae4b84fd7cc")
 		)
@@ -6436,6 +6580,15 @@
 			)
 		)
 		(property "RSONLINE" ""
+			(at 118.11 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" ""
 			(at 118.11 181.61 0)
 			(effects
 				(font
@@ -6659,6 +6812,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" ""
+			(at 78.74 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
@@ -6733,6 +6895,15 @@
 			)
 		)
 		(property "RSONLINE" "NA"
+			(at 26.67 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" ""
 			(at 26.67 81.28 0)
 			(effects
 				(font
@@ -6947,6 +7118,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" "78-0566"
+			(at 228.6 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "3"
 			(uuid "33ed23af-1396-4a1e-a4c3-e0bcd759d07f")
 		)
@@ -7030,6 +7210,15 @@
 			)
 		)
 		(property "RSONLINE" ""
+			(at 118.11 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" ""
 			(at 118.11 173.99 0)
 			(effects
 				(font
@@ -7186,6 +7375,15 @@
 				(hide yes)
 			)
 		)
+		(property "RAPID" ""
+			(at 26.67 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project ""
 				(path "/d8f89e6a-e7a3-4b50-a378-920a806c8e2d"
@@ -7260,6 +7458,15 @@
 			)
 		)
 		(property "RSONLINE" ""
+			(at 78.74 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "RAPID" ""
 			(at 78.74 181.61 0)
 			(effects
 				(font

@@ -1,12 +1,12 @@
-Reference,Value,Qty,Note,Description,RSONLINE
-BT1,9v Battery,1,,PP3 9v Battery,
-C2,0.1uF,1,Maximum height is 10mm,Unpolarized capacitor,538-1433
-C1,0.22uF,1,Maximum height is 10mm,Unpolarized capacitor,194-0629
-C3 C4,"100uF, 16V",2,Maximum height is 10mm,,176-3779 
-D1,1N5401,1,Polarity protection diode,,628-9451
-J3 J4 J6 J7,Conn_01x06,4,"Might be easier and cheaper to just cut from bigger lengths 0.1"" pitch, polarised, any type",https://uk.rs-online.com/web/p/pcb-headers/6812994,681-2994
-J1 J2,Pololu Item #4772,2,"6 pin 0.1"" breakout 6 pin header, 0.1"", male","Single row, 01x06, JST-SH breakout",
-M1 M2,N20 MOTOR,2,Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws,https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683,NA
-R1,47K,1,,Resistor,707-8369
-U1,DVR8833_DC_Controller,1,,DC Motor Controller https://amzn.eu/d/csv7cRr as an option,
-U2,LM7805_TO220,1,,"Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220",793-1346
+Reference,Value,Qty,Note,Description,RSONLINE,RAPID
+BT1,9v Battery,1,,PP3 9v Battery,,
+C2,0.1uF,1,Maximum height is 10mm,Unpolarized capacitor,538-1433,11-4110
+C1,0.22uF,1,Maximum height is 10mm,Unpolarized capacitor,194-0629,11-3442
+C3 C4,"100uF, 16V",2,Maximum height is 10mm,,176-3779 176-3779 ,11-4109
+D1,1N5401,1,Polarity protection diode,,628-9451,
+J3 J4 J6 J7,Conn_01x06,4,"Might be easier and cheaper to just cut from bigger lengths 0.1"" pitch, polarised, any type",https://uk.rs-online.com/web/p/pcb-headers/6812994,681-2994,01-5723 08-5765 78-0566
+J1 J2,Pololu Item #4772,2,"6 pin 0.1"" breakout 6 pin header, 0.1"", male","Single row, 01x06, JST-SH breakout",,22-0795
+M1 M2,N20 MOTOR,2,Sidways or regular would work for starting out 50:1 gearbox is recommended commercial mounts need bushing for screws,https://shop.pimoroni.com/products/micro-metal-motor-encoder?variant=39888423321683,NA,
+R1,47K,1,,Resistor,707-8369,62-0410
+U1,DVR8833_DC_Controller,1,,DC Motor Controller https://amzn.eu/d/csv7cRr as an option,,
+U2,LM7805_TO220,1,,"Positive 1A 35V Linear Regulator, Fixed Output 5V, TO-220",793-1346,

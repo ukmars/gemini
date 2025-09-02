@@ -83,12 +83,14 @@ loopPeriod = 4  #Delay between control loop iterations in mS - control loop freq
 error = 0       #Delay should be as small as possible but give enough time for the logging data transmission over bluetooth
 oldError = 0
 change = 0
-kp    = 0.75 #0.5 #1 #2.5
-kd = 1000 #500 #2000 #1500 #1000 #1500 #3000       #differential constant defined as the multiplier of change in error per second
+kp    = 1.5
+kd = 1500       #differential constant defined as the multiplier of change in error per second
 kdLoop = kd * loopPeriod / 1000 #The actual constant applied in the loop needs to scale for the duration of the loop
-speed = 20      #between 0 and 100
+speed = 25      #between 0 and 100
 pErrorTerm = 0
 dErrorTerm = 0
+fallOffError = 80	#Error to apply if line is lost on one side
+fallOffLevel = 10   #Sensor reading(%) below which line is considered lost
 
 #Global variables to make readings available after the update function has run
 leftSensorUnlit = 0
@@ -141,14 +143,14 @@ def leftMotor(speed):
         if speed > 100:
             speed = 100
         dutyCycle = speed * 655
-        leftFwd.duty_u16(0)
-        leftRev.duty_u16(int(dutyCycle))
+        leftFwd.duty_u16(65535 - int(dutyCycle))
+        leftRev.duty_u16(65535)
     else:
         if speed > 100:
             speed = 100
         dutyCycle = speed * 655
-        leftRev.duty_u16(0)
-        leftFwd.duty_u16(int(dutyCycle))
+        leftRev.duty_u16(65535 - int(dutyCycle))
+        leftFwd.duty_u16(65535)
 
 def rightMotor(speed):
     if speed < 0:
@@ -156,20 +158,20 @@ def rightMotor(speed):
         if speed > 100:
             speed = 100
         dutyCycle = speed * 655
-        rightFwd.duty_u16(0)
-        rightRev.duty_u16(int(dutyCycle))
+        rightFwd.duty_u16(65535 - int(dutyCycle))
+        rightRev.duty_u16(65535)
     else:
         if speed > 100:
             speed = 100
         dutyCycle = speed * 655
-        rightRev.duty_u16(0)
-        rightFwd.duty_u16(int(dutyCycle))
+        rightRev.duty_u16(65535 - int(dutyCycle))
+        rightFwd.duty_u16(65535)
 
 def stopMotors():       
-    rightRev.duty_u16(0)
-    rightFwd.duty_u16(0)
-    leftRev.duty_u16(0)
-    leftFwd.duty_u16(0)
+    rightRev.duty_u16(65535)
+    rightFwd.duty_u16(65535)
+    leftRev.duty_u16(65535)
+    leftFwd.duty_u16(65535)
 
 #--------------------------------------------
 #calibration caps and collars
@@ -376,8 +378,8 @@ while (True):
         rightMezzLED.value(0)
 
         startCount = loopCounter
-        leftMotor(25)
-        rightMotor(-25)
+        leftMotor(15)
+        rightMotor(-15)
         while((loopCounter - startCount) < 200): 
             loopCounter +=1
             readSensors()
@@ -438,7 +440,7 @@ while (True):
             radiusTrigger = False
 
         if(robotState == STOPPING):
-            if((loopCounter - startCount) < 50):    #run on past the finsih marker
+            if((loopCounter - startCount) < 10):    #run on past the finsih marker
                 leftMezzLED.value(1)
             else:
                 robotState =  HALTED
@@ -449,9 +451,15 @@ while (True):
         lsensorCal = (leftSensorValue - leftMin)*100 / (leftMax - leftMin)
 
         #detect loosing the line
-        if lsensorCal > 25 and rsensorCal > 25: #on the line
+        if lsensorCal > fallOffLevel or rsensorCal > fallOffLevel: #on the line
             loopCounter +=1
-            error = lsensorCal - rsensorCal
+            if lsensorCal < fallOffLevel or rsensorCal < fallOffLevel:
+                if oldError < 0:
+                    error = -fallOffError
+                else:
+                    error = fallOffError
+            else:
+                error = lsensorCal - rsensorCal
             pErrorTerm = error * kp
             change = error - oldError
             oldError = error

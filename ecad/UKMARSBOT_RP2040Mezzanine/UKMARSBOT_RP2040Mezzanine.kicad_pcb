@@ -6433,7 +6433,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "2025-07-07"
+	(gr_text "2025-08-16"
 		(at 139.7 63.5 0)
 		(layer "F.SilkS")
 		(uuid "4f13a84d-63cb-4511-901c-29b4558e0074")
@@ -6481,7 +6481,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "2.0"
+	(gr_text "2.1"
 		(at 163.723173 118.999181 270)
 		(layer "F.SilkS")
 		(uuid "59a1e622-4d9d-4015-8778-ccfca1a715c0")

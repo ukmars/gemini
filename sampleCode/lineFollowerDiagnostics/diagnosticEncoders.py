@@ -4,6 +4,7 @@
 #Encoder pin assignments and rotataion directions are hard coded in the class definition
 #
 #
+# type: ignore
 
 import machine
 import utime

@@ -156,7 +156,7 @@ jobs:
 
             out_path = 'docs/all_projects_bom.csv'
             # Desired column order (first column = project name)
-            cols = ['Project','Reference','Value','Qty','Note','Description','RSONLINE']
+            cols = ['Project','Reference','Value','Qty','Note','Description','RSONLINE','RAPID']
 
             rows = []
             for p in bom_paths:
