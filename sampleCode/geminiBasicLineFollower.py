@@ -1,10 +1,10 @@
 # * Project:    UKMARS Gemini
-# * File:       GeminiLineFollower.py
+# * File:       GeminiBasicLineFollower.py
 # * Updated for V2 board configuration
 #
 # * Author:     Ian Butterworth
 # * Created:    21 May 2025
-# * Updated:	22 August 2025
+# * Updated:	12 August 2025
 # *
 # * Description:
 # *     Simple example line following code for the UKMARS Gemini platform with PiPico.
