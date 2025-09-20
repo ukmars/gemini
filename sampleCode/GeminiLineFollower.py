@@ -13,6 +13,16 @@
 # *     It is not necessary to have the bluetooth module installed the robot will run but 
 # *     without the bluetooth serial link, logging information will not be available.
 # *
+# * Operation:
+# *		1	Switch on the robot and place it anywhere on the white line of the track
+# *		2	Press the right button on the Mezzanine board
+# *				The LED next to the button will illuminate to show the button is detected
+# *				The robot will spin on the spot to callibrate the sensors
+# *		3	Place the robot on the line in the start position
+# *		4	Press the left button on the Mezzanine board
+# *				The LED next to the button will illuminate to show the button is detected
+# *				The robot will complete one circuit of the track and come to a halt between the start and finish markers
+# *		Step 4 can be repeated multiple times, if re-calibration is wanted press RESET and go to step 1
 #  * -----
 #  * MIT License
 #  *
@@ -401,8 +411,8 @@ while (True):
         onBoardLED.value(1)
         time.sleep(0.1)
         onBoardLED.value(0)
+        leftMezzLED.value(1)    #signal button detected with LED
         time.sleep(0.1)
-    leftMezzLED.value(1)    #signal button detected with LED
     leftSensorLED.value(0)  #clear LEDs used to signal significant steering adjustment
     rightSensorLED.value(0)
     uart.write('Starting robot')

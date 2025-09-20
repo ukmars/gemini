@@ -719,7 +719,7 @@
           "group_by": false,
           "label": "RSONLINE",
           "name": "RSONLINE",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
