@@ -5299,7 +5299,7 @@
 				(hide yes)
 			)
 		)
-		(property "RAPID" "11-3442"
+		(property "RAPID" "11-3449"
 			(at 220.98 111.76 0)
 			(effects
 				(font
@@ -6108,7 +6108,7 @@
 				(hide yes)
 			)
 		)
-		(property "RAPID" "11-4110"
+		(property "RAPID" "11-3442"
 			(at 247.65 111.76 0)
 			(effects
 				(font
