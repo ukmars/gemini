@@ -32,7 +32,7 @@ def left_encoder_callback(pin):
             left_counts -= 1
         else:
             left_counts += 1
-        last_a = a
+        last_left_a = a
         
 def right_encoder_callback(pin):
     global right_counts, last_right_a
@@ -45,7 +45,7 @@ def right_encoder_callback(pin):
             right_counts -= 1
         else:
             right_counts += 1
-        last_a = a
+        last_right_a = a
 
 
 # Attach interrupts
