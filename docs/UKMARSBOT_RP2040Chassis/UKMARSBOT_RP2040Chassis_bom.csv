@@ -2,7 +2,7 @@ Reference,Value,Qty,Note,Description,RSONLINE,RAPID
 BT1,9v Battery,1,,PP3 9v Battery,,
 C2,0.1uF,1,Maximum height is 10mm,Unpolarized capacitor,538-1433,11-3442
 C1,0.22uF,1,Maximum height is 10mm,Unpolarized capacitor,194-0629,11-3449
-C3 C4,"100uF, 16V",2,Maximum height is 10mm,,176-3779 176-3779 ,11-4109
+C3 C4,"100uF, 16V",2,Maximum height is 10mm,,176-3779 or 173-9417,11-4119
 D1,1N5401,1,Polarity protection diode,,628-9451,
 J3 J4 J6 J7,Conn_01x06,4,"Might be easier and cheaper to just cut from bigger lengths 0.1"" pitch, polarised, any type",https://uk.rs-online.com/web/p/pcb-headers/6812994,681-2994,01-5723 08-5765 78-0566
 J1 J2,Pololu Item #4772,2,"6 pin 0.1"" breakout 6 pin header, 0.1"", male","Single row, 01x06, JST-SH breakout",,22-0795
