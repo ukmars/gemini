@@ -80,8 +80,8 @@ jobs:
       - uses: actions/checkout@v4
         with: { lfs: true }
 
-      - name: Run KiBot (KiCad 8)
-        uses: INTI-CMNB/KiBot@v2_k8
+      - name: Run KiBot (KiCad 9)
+        uses: INTI-CMNB/KiBot@v2_k9
         with:
           config: config.kibot.yaml
           dir: build/${{ matrix.project }}
