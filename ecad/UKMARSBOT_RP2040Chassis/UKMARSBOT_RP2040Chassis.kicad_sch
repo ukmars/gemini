@@ -4665,7 +4665,7 @@
 	)
 	(symbol
 		(lib_id "Device:Battery")
-		(at 262.89 59.69 0)
+		(at 248.92 63.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4674,7 +4674,7 @@
 		(fields_autoplaced yes)
 		(uuid "10fea7cf-7774-4c8f-a2a1-4fa20887f090")
 		(property "Reference" "BT1"
-			(at 266.7 57.8484 0)
+			(at 252.73 61.6584 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4683,7 +4683,7 @@
 			)
 		)
 		(property "Value" "9v Battery"
-			(at 266.7 60.3884 0)
+			(at 252.73 64.1984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4692,7 +4692,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 262.89 58.166 90)
+			(at 248.92 61.976 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4701,7 +4701,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 262.89 58.166 90)
+			(at 248.92 61.976 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4710,7 +4710,7 @@
 			)
 		)
 		(property "Description" "PP3 9v Battery"
-			(at 262.89 59.69 0)
+			(at 248.92 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4719,7 +4719,7 @@
 			)
 		)
 		(property "RAPID" ""
-			(at 262.89 59.69 0)
+			(at 248.92 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
